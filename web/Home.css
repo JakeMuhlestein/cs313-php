@@ -21,6 +21,7 @@
 }
       
 .a {
+
       grid-column: 1 / 4;
       grid-row: 1;
       background-color: #005fb3;
@@ -49,5 +50,9 @@
       grid-column: 1 / 4;
       grin-row: 3;
       background-color: #005fb3;
+      text-align: center;
+}
+
+.h1 {
       text-align: center;
 }
