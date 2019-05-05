@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-
-<head>
-	<title>PHP Page</title>
-</head>
-<body>
-	<?php echo "date("Y/m/d")" ;?>
-</body>
+<html>
+ <head>
+  <title>PHP Test</title>
+ </head>
+ <body>
+ <?php echo '<p>Hello World</p>'; ?> 
+ </body>
 </html>
