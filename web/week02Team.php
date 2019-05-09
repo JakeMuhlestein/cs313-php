@@ -1,6 +1,5 @@
 <?php
 $majors = array("CS"=>"Computer Science", "WD"=>"Web Design and Development", "CIT"=>"Computer Information and Technology", "CE" => "Computer Engineering");
-echo "php file";
 ?>
 
 
@@ -20,7 +19,7 @@ echo "php file";
 	<label>Major</label> <br>
 	<?php foreach ($majors as $key=>$value) {
 		?>
-		<input type=“radio” name=“major” value=“<?php echo $key ?>”> <?php echo $value ?> <br><?php
+		<input type='radio' name=“major” value=“<?php echo $key ?>”> <?php echo $value ?> <br><?php
 		}?>
 	
 
