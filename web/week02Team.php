@@ -23,7 +23,7 @@ $majors = array("CS"=>"Computer Science", "WD"=>"Web Design and Development", "C
 		}?>
 	
 
-	Comment:<textarea name="comment"></textarea>
+	Comment:<textarea name="comment"></textarea><br>
 
 	<input type="submit" value="Submit">
 
