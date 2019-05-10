@@ -15,6 +15,12 @@
 				<th>Price</th>
 				<th>Quantity</th>
 			</tr>
+			<tr>
+				<td>Calander</td>
+				<td>12 months</td>
+				<td>$12.00</td>
+				<td><input type="text" name="qty"></ins></td>
+			</tr>
 
 		</table>
 	</form>
