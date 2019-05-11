@@ -29,10 +29,10 @@ foreach ( $_SESSION['cart'] as $ino ) {
     ?>
 <tr>
     <td>
-        Name: <?php echo $_SESSION['cart']['name']; ?>
+        Name: <?php echo $_SESSION['cart'][0]["name"]; ?>
     </td>
     <td>
-        Price: <?php echo $items['cart']['price']; ?>
+        Price: <?php echo $items['cart'][0]["price"]; ?>
     </td>
     <td>
         <button type='submit' name='delete' value='<?php echo $ino; ?>'>Remove</button>
