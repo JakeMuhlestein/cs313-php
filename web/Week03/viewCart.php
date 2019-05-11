@@ -1,13 +1,7 @@
 <?php
 session_start();
 
-// Delete Item
-else if (isset ( $_POST ['delete'] )) { // a remove button has been clicked
-    // Remove the item from the cart
-    if (false !== $key = array_search($_POST['delete'], $_SESSION['cart'])) {
-        unset($_SESSION['cart'][$key]);
-    }
-}
+
 
 ?>
 
