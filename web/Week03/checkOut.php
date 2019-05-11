@@ -11,12 +11,13 @@ if (isset($_POST['cart'])){
 ?>
 <?php
 if (isset($_POST['submit'])){
+  $_SESSION["custName"] = $_POST["name"];
+  $_SESSION["custAddress"] = $_POST["address"];
+  $_SESSION["custCity"] = $_POST["city"];
+  $_SESSION["custState"] = $_POST["state"];
+  $_SESSION["custZip"] = $_POST["zip"];
   header("Location: confirmation.php");
-  $_SESSION['custName'] = $_POST['name'];
-  $_SESSION['custAddress'] = $_POST['address'];
-  $_SESSION['custCity'] = $_POST['city'];
-  $_SESSION['custState'] = $_POST['state'];
-  $_SESSION['custZip'] = $_POST['zip'];
+
 }
 ?>
 
