@@ -22,7 +22,7 @@ if (isset ( $_POST ["buy"] )) {
 	$Qty = $_POST['qty'];
 
 	$items = array(
-		array("$Name","$Price","$Qty")
+		array('name' => "$Name", 'price' => "$Price", 'qty' => "$Qty")
 	);
 
     // Check the item is not already in the cart
@@ -65,6 +65,7 @@ if (isset ( $_POST ["buy"] )) {
 
 	</form>
 <?php
+echo json_encode($_SESSION['cart']);
 $total = 0;
 foreach ( $_SESSION['cart'] as $ino) {
     ?>
