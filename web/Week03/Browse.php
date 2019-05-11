@@ -16,7 +16,7 @@ if (! isset ( $_SESSION ['cart'] )) {
 
 // Add
 if (isset ( $_POST ["buy"] )) {
-	alert("buy pressed");
+
 	$Name = $_POST['name'];
 	$Price = $_POST['price'];
 	$Qty = $_POST['qty'];
@@ -62,6 +62,24 @@ if (isset ( $_POST ["buy"] )) {
 
 	</form>
 
+$total = 0;
+foreach ( $_SESSION['cart'] as $ino) {
+    ?>
+<tr>
+    <td>
+        Name: <?php echo $ino['name']; ?>
+    </td>
+    <td>
+        Price: <?php echo $ino['price']; ?>
+    </td>
+    <td>
+        <button type='submit' name='delete' value='<?php echo $ino; ?>'>Remove</button><br>
+    </td>
+</tr>
+<?php
+    $total += $items[$ino]['price'];
+} // end foreach
+?>
 <!--
 		<table>
 			<tr>
