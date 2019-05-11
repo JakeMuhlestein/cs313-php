@@ -17,8 +17,9 @@ if (! isset ( $_SESSION ['cart'] )) {
 // Add
 if (isset ( $_POST ["buy"] )) {
 	$Name = $_POST['name'];
-	$Price = $_POST['price']
-	$Qty = $_POST['qty']
+	$Price = $_POST['price'];
+	$Qty = $_POST['qty'];
+
 
     // Check the item is not already in the cart
     if (!in_array($_POST ["buy"], $_SESSION['cart'])) {
