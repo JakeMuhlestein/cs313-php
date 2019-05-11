@@ -1,13 +1,27 @@
-<!DOCTYPE html>
+<?php
+session_start();
+$_SESSION['cart']=array();
+
+?>
+
+
 <html>
 <head>
 	<title></title>
 </head>
 <body>
 
+	<ul>
+  		<li><a class="active" href="Browse.php">Home</a></li>
+  		<li><a href="viewCart.php">News</a></li>
+  		<li><a href="checkOut.php">Contact</a></li>
+	</ul>
+
+
+
 	<h2>Store</h2>
 
-	<form action="ViewCart.php" method="get">
+	<form action="ViewCart.php" method="post">
 		<table>
 			<tr>
 				<th>Item Name</th>
