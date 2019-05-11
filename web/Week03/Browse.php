@@ -19,7 +19,7 @@ if (isset ( $_POST ["buy"] )) {
     // Check the item is not already in the cart
     if (!in_array($_POST ["buy"], $_SESSION['cart'])) {
         // Add new item to cart
-        $_SESSION ['cart'][] = $_POST["buy"];
+        $_SESSION ['cart'] = $_POST["buy"];
     }
 }
 
@@ -45,8 +45,8 @@ if (isset ( $_POST ["buy"] )) {
 
 	<form action='<?php echo $_SERVER['PHP_SELF']; ?>' method="post">
 
-		<p>Book<input type="hidden" id='name' name="Book" value="Book" /></p>
-		<p>Price: $10.00 <input type="hidden" id='price' name="10" value='10' /></p>
+		Item: Book<input type="hidden" id='name' name="Book" value="Book" />
+		Price: $10.00 <input type="hidden" id='price' name="10" value='10' />
 		<button type='submit' name='buy' value='$ino'>Buy</button>
 
 	</form>
