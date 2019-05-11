@@ -67,7 +67,7 @@ foreach ( $_SESSION['cart'] as $ino) {
     ?>
 <tr>
     <td>
-    	<?php print_r($_POST['buy']) ; ?>
+
         Name: <?php echo $ino['name']; ?>
     </td>
     <td>
@@ -81,6 +81,7 @@ foreach ( $_SESSION['cart'] as $ino) {
     $total += $items[$ino]['price'];
 } // end foreach
 ?>
+<?php print_r($_POST[]) ; ?>
 <!--
 		<table>
 			<tr>
