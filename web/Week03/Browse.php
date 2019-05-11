@@ -4,6 +4,14 @@ if (! isset ( $_SESSION ['cart'] )) {
     $_SESSION ['cart'] = array ();
 }
 
+$items = array (
+        'A123' => array (
+                'name' => 'Item1',
+                'desc' => 'Item 1 description...',
+                'price' => 1000 
+        )
+    )
+
 // Add
 if (isset ( $_POST ["buy"] )) {
     // Check the item is not already in the cart
