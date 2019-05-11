@@ -1,3 +1,14 @@
+<?php
+if (isset($_POST['cart'])){
+  header("Location: viewCart.php");
+}
+?>
+<?php
+if (isset($_POST[''])){
+  header("Location: confirmation.php");
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,14 +25,19 @@
 
 
 	<p>Please enter the shipping address</p>
-	Name <input type="text" name="name">
-	Address <input type="text" name="address">
-	City<input type="text" name="city">
-	State<input type="text" name="state">
-	Zip<input type="text" name="zip">
+	Name <input type="text" name="name"><br>
+	Address <input type="text" name="address"><br>
+	City<input type="text" name="city"><br>
+	State<input type="text" name="state"><br>
+	Zip<input type="text" name="zip"><br>
 
-	<button type="submit" onclick="viewCart.php">Go Back to Cart</button>
-	<button type="submit" onclicj="confirmation.php">Check Out</button>
+	<form action='<?php echo $_SERVER['PHP_SELF']; ?>' method="post">
+		<input type="submit" id="cart" name="cart" value="Go Back to Cart">
+	</form>
+	<form action='<?php echo $_SERVER['PHP_SELF']; ?>' method="post">
+		<input type="submit" id="submit" name="submit" value="Submit Order">
+	</form>
+
 
 
 </body>
