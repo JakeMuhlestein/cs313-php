@@ -17,16 +17,16 @@ if (isset ( $_POST ["buy"] )) {
 	$items = array('name' => "$Name", 'price' => "$Price", 'qty' => "$Qty");
 
     // Check the item is not already in the cart
-    <?php
-		foreach ( $_SESSION['cart'] as $ino) {
+    //<?php
+	//	foreach ( $_SESSION['cart'] as $ino) {
     
 
         // Add new item to cart
        
     
    
-	} // end foreach
-	?>
+	//} // end foreach
+	//?>
 	<?php  array_push($_SESSION ['cart'] ,$items); ?>
 }
 
