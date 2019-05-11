@@ -54,12 +54,14 @@ if (isset ( $_POST ["buy"] )) {
 	<h2>Store</h2>
 
 	<form action='<?php echo $_SERVER['PHP_SELF']; ?>' method="post">
-
-
-
 		Name<input type="hidden" id="book" name="name" value="Book">
 		Price<input type="hidden" id="price" name="price" value="10">
 		Qty<input type="hidden" id="price" name="qty" value="2">
+		<button type='submit' name='buy' value='$ino'>Buy</button>
+
+		Name<input type="hidden" id="book" name="name" value="Map">
+		Price<input type="hidden" id="price" name="price" value="35">
+		Qty<input type="hidden" id="price" name="qty" value="1">
 		<button type='submit' name='buy' value='$ino'>Buy</button>
 
 
