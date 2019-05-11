@@ -13,6 +13,15 @@
 	</ul>
 
 
+	<p>Please enter the shipping address</p>
+	Name <input type="text" name="name">
+	Address <input type="text" name="address">
+	City<input type="text" name="city">
+	State<input type="text" name="state">
+	Zip<input type="text" name="zip">
+
+	<button type="submit" onclick="viewCart.php">Go Back to Cart</button>
+	<button type="submit" onclicj="confirmation.php">Check Out</button>
 
 
 </body>
