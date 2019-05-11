@@ -1,8 +1,5 @@
 <?php
 session_start();
-if (! isset ( $_SESSION ['cart'] )) {
-    $_SESSION ['cart'] = array ();
-}
 
 $items = array (
         'A123' => array (
@@ -11,6 +8,11 @@ $items = array (
                 'price' => 1000 
         )
     );
+
+if (! isset ( $_SESSION ['cart'] )) {
+    $_SESSION ['cart'] = array ();
+}
+
 
 // Add
 if (isset ( $_POST ["buy"] )) {
