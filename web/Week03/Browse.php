@@ -61,7 +61,7 @@ if (isset ( $_POST ["buy"] )) {
 
 
 	</form>
-
+<?php
 $total = 0;
 foreach ( $_SESSION['cart'] as $ino) {
     ?>
