@@ -22,13 +22,12 @@ session_start();
 	</ul>
 
 <?php
-echo json_encode($_SESSION['cart']);
-// Set a default total
 $total = 0;
 foreach ( $_SESSION['cart'] as $ino) {
     ?>
 <tr>
     <td>
+
         Name: <?php echo $ino['name']; ?>
     </td>
     <td>
@@ -39,9 +38,11 @@ foreach ( $_SESSION['cart'] as $ino) {
     </td>
 </tr>
 <?php
-    $total += $items[$ino]['price'];
+    $total += $ino['price'];
 } // end foreach
 ?>
+
+Total: $<?php echo $total; ?>
 
 Total: $<?php echo $total; ?>
 </body>
