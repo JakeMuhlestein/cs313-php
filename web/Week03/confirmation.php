@@ -25,7 +25,9 @@ Shipping Info:<br>
 
 	echo "Name: " . $_SESSION["custName"] . ".<br>";
 	echo "Address: " . $_SESSION["custAddress"] . ".<br>";
-	echo "City: " . $_SESSION['custCity'] . "State: " . $_SESSION['custState'] . "Zip: " . $_SESSION['custZip'] .;
+	echo "City: " . $_SESSION['custCity'];
+	echo "State: " . $_SESSION['custState']; 
+	echo "Zip: " . $_SESSION['custZip'];
 
 
 ?>
