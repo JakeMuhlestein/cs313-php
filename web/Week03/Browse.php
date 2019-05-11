@@ -74,7 +74,7 @@ foreach ( $_SESSION['cart'] as $ino) {
 <tr>
     <td>
 
-        Name: <?php echo $ino['name']; ?>
+        Name: <?php echo $_SESSION['cart']['name'][$ino]; ?>
     </td>
     <td>
         Price: <?php echo $ino['price']; ?>
