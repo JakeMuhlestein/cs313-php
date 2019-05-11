@@ -16,6 +16,7 @@ if (! isset ( $_SESSION ['cart'] )) {
 
 // Add
 if (isset ( $_POST ["buy"] )) {
+	alert("buy pressed");
 	$Name = $_POST['name'];
 	$Price = $_POST['price'];
 	$Qty = $_POST['qty'];
@@ -60,9 +61,7 @@ if (isset ( $_POST ["buy"] )) {
 
 
 	</form>
-	<?php
-	print_r($_POST['$ino']);
-	?>
+
 <!--
 		<table>
 			<tr>
