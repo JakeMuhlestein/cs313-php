@@ -14,7 +14,7 @@
 	</ul>
 
 	<?php
-	echo $_SESSION['cart'][]['price'];
+	echo $_SESSION['cart']['price'];
 	print_r($_SESSION['cart']);
 	// Set a default total
 	$total = 0;
