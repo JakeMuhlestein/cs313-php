@@ -58,7 +58,6 @@ if (isset ( $_POST ["buy"] )) {
 		<button type='submit' name='buy' value='$ino'>Buy</button>
 	</form>
 <?php
-print_r($_SESSION['cart']);
 $total = 0;
 foreach ( $_SESSION['cart'] as $ino) {
     ?>
@@ -75,10 +74,11 @@ foreach ( $_SESSION['cart'] as $ino) {
     </td>
 </tr>
 <?php
-    $total += $items[$ino]['price'];
+    $total += $ino['price'];
 } // end foreach
 ?>
 
+Total: $<?php echo $total; ?>
 <!--
 		<table>
 			<tr>
