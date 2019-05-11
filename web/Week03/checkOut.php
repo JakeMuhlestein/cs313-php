@@ -4,7 +4,7 @@ if (isset($_POST['cart'])){
 }
 ?>
 <?php
-if (isset($_POST[''])){
+if (isset($_POST['submit'])){
   header("Location: confirmation.php");
 }
 ?>
