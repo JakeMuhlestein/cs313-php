@@ -7,10 +7,10 @@ if (! isset ( $_SESSION ['cart'] )) {
 // Add
 if (isset ( $_POST ["buy"] )) {
     // Check the item is not already in the cart
-    if (!in_array($_POST ["buy"], $_SESSION['cart'])) {
+    //if (!in_array($_POST ["buy"], $_SESSION['cart'])) {
         // Add new item to cart
         $_SESSION ['cart'][] = $_POST["buy"];
-    }
+    //}
 }
 
 
