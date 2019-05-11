@@ -47,8 +47,9 @@ if (isset ( $_POST ["buy"] )) {
 
 
 
-		<p>Item: Book<input type="hidden" id="name" name="Book" value="Book" /></p>
-		<p>Price: $10.00 <input type="hidden" id="price" name="10" value='10' /></p>
+		<p>Item: Book<input type="hidden" id="name" name="book[]" value="Book" /></p>
+		<p>Price: $10.00 <input type="hidden" id="price" name="price[]" value='10' /></p>
+
 		<button type='submit' name='buy' value='$ino'>Buy</button>
 
 	</form>
