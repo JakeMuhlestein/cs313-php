@@ -10,7 +10,7 @@ $items = array (
     );
 
 if (! isset ( $_SESSION ['cart'] )) {
-    $_SESSION ['cart'] = array ();
+    $_SESSION ['cart'] = $items;
 }
 
 
@@ -19,7 +19,7 @@ if (isset ( $_POST ["buy"] )) {
     // Check the item is not already in the cart
     //if (!in_array($_POST ["buy"], $_SESSION['cart'])) {
         // Add new item to cart
-        $_SESSION ['cart']['price'] = $_POST['price'];
+        $_SESSION ['cart'] = $_POST['price'];
     //}
 }
 
