@@ -1,8 +1,9 @@
 <?php
+
+
 	session_start();
-
-
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,7 +23,7 @@ Shipping Info:<br>
 	echo "test";
 	echo "Name: " . $_SESSION["custName"] . ".<br>";
 	echo "Address: " . $_SESSION["custAddress"] . ".<br>";
-	echo "City: " . $_SESSION['custCity'] . "State: " . $_SESSION['custState'] . "Zip: " . $_SESSION['custZip'];
+	echo "City: " . $_SESSION['custCity'] . "State: " . $_SESSION['custState'] . "Zip: " . $_SESSION['custZip'] .;
 
 
 $total = 0;
@@ -44,6 +45,8 @@ foreach ( $_SESSION['cart'] as $ino) {
 ?>
 
 Total: $<?php echo $total; ?>
+
+
 
 </body>
 </html>
