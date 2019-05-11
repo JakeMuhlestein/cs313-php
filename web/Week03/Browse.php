@@ -54,14 +54,24 @@ if (isset ( $_POST ["buy"] )) {
 	<form action='<?php echo $_SERVER['PHP_SELF']; ?>' method="post">
 		Item: Book<input type="hidden" id="book" name="name" value="Book">
 		Price: $10.00 <input type="hidden" id="price" name="price" value="10">
-		Qty<input type="hidden" id="price" name="qty" value="2">
 		<button type='submit' name='buy' value='$ino'>Buy</button>
 	</form>
 
 	<form action='<?php echo $_SERVER['PHP_SELF']; ?>' method="post">
-		Name<input type="hidden" id="book" name="name" value="Map">
-		Price<input type="hidden" id="price" name="price" value="35">
-		Qty<input type="hidden" id="price" name="qty" value="1">
+		Item: Map<input type="hidden" id="book" name="name" value="Map">
+		Price: $5.00 <input type="hidden" id="price" name="price" value="5">
+		<button type='submit' name='buy' value='$ino'>Buy</button>
+	</form>
+
+	<form action='<?php echo $_SERVER['PHP_SELF']; ?>' method="post">
+		Item: Crayons<input type="hidden" id="crayon" name="name" value="Crayons">
+		Price: $3.00 <input type="hidden" id="price" name="price" value="3">
+		<button type='submit' name='buy' value='$ino'>Buy</button>
+	</form>
+
+	<form action='<?php echo $_SERVER['PHP_SELF']; ?>' method="post">
+		Item: Spiral Notebook<input type="hidden" id="notebook" name="name" value="Spiral Notebook">
+		Price: $2.00 <input type="hidden" id="price" name="price" value="2">
 		<button type='submit' name='buy' value='$ino'>Buy</button>
 	</form>
 
