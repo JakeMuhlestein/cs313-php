@@ -45,8 +45,8 @@ if (isset ( $_POST ["buy"] )) {
 
 	<form action='<?php echo $_SERVER['PHP_SELF']; ?>' method="post">
 
-		<p>Book<input type="hidden" name="Book" value="Book" /></p>
-		<p>Price: $10.00 <input type="hidden" name="10" value='10' /></p>
+		<p>Book<input type="hidden" id="name" name="Book" value="Book" /></p>
+		<p>Price: $10.00 <input type="hidden" id="price" name="10" value='10' /></p>
 		<button type='submit' name='buy' value='$ino'>Buy</button>
 
 	</form>
