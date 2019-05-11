@@ -3,7 +3,7 @@ session_start();
 
 if (isset ( $_POST ['delete'] )) { // a remove button has been clicked
     // Remove the item from the cart
-    foreach ($arrays as $current_key => $current_array) {
+    foreach ($_SESSION['cart'] as $current_key => $current_array) {
     echo "current key: $current_key\n";
     foreach ($arrays as $search_key => $search_array) {
         if ($search_array['name'] == $current_array['name']) {
