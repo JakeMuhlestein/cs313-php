@@ -18,11 +18,27 @@ session_start();
   		<li><a href="checkOut.php">Checkout</a></li>
 	</ul>
 
-	<?php
+<?php
+// Set a default total
+$total = 0;
+foreach ( $_SESSION['cart'] as $ino ) {
+    ?>
+<tr>
+    <td>
+        Name: <?php echo $items[$ino]['name']; ?>
+    </td>
+    <td>
+        Price: <?php echo $items[$ino]["price"]; ?>
+    </td>
+    <td>
+        <button type='submit' name='delete' value='<?php echo $ino; ?>'>Remove</button>
+    </td>
+</tr>
+<?php
+    $total += $items[$ino]['price'];
+} // end foreach
+?>
 
-	
-	print_r($_SESSION);
-
-	?>
+Total: $<?php echo $total; ?>
 </body>
 </html>

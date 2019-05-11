@@ -2,15 +2,17 @@
 session_start();
 ?>
 
-<?php
-// Set session variables
-$_SESSION["favcolor"] = "green";
-$_SESSION["favanimal"] = "cat";
-echo "Session variables are set.";
-?>
+items = array (
+        'A123' => array (
+                'name' => 'Item1',
+                'desc' => 'Item 1 description...',
+                'price' => 1000 
+        )
+    );
 
-
-
+if (! isset ( $_SESSION ['cart'] )) {
+    $_SESSION ['cart'] = array ();
+}
 
 <html>
 <head>
