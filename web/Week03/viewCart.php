@@ -39,7 +39,7 @@ foreach ( $_SESSION['cart'] as $ino ) {
     </td>
 </tr>
 <?php
-    $total += $ino['price'];
+    $total += [$ino]['price'];
 } // end foreach
 ?>
 
