@@ -14,6 +14,13 @@ if (isset ( $_POST ["buy"] )) {
 }
 
 
+if (isset($_POST['buy']))
+{
+    $getmsg = $_POST['hiddenInput'];
+    echo $getmsg;
+}
+
+
 ?>
 
 
@@ -41,16 +48,16 @@ if (isset ( $_POST ["buy"] )) {
 	<form action='<?php echo $_SERVER['PHP_SELF']; ?>' method="post">
 		<table>
 			<tr>
-				<th>Item Name</th>
-				<th>Brief Desc.</th>
-				<th>Price</th>
-				<th>Quantity</th>
+				<th id="name">Item Name</th>
+				<th id="desc">Brief Desc.</th>
+				<th id="price">Price</th>
+				<th id="qty">Quantity</th>
 			</tr>
 			<tr>
-				<td>Calander</td>
-				<td>12 months</td>
-				<td>$12.00</td>
-				<td><input type="text" name="qtyCal"></ins></td>
+				<td headers="name">Calander</td>
+				<td headers="desc">12 months</td>
+				<td headers="price">$12.00</td>
+				<td headers="qty"><input type="text" name="qtyCal"></ins></td>
 				<td><button type='submit' name='buy' value='$ino'>Add to Cart</button></td>
 			</tr>
 			<tr>
