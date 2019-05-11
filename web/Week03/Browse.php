@@ -11,7 +11,7 @@ $items = array (
     );
 
 if (! isset ( $_SESSION ['cart'] )) {
-    $_SESSION ['cart'] = array ();
+    $_SESSION ['cart'] = $items;
 }
 
 // Add
