@@ -70,7 +70,7 @@ if (isset ( $_POST ["buy"] )) {
 		<button type='submit' name='buy' value='$ino'>Buy</button>
 	</form>
 <?php
-echo json_encode($_SESSION['cart']);
+print_r($_SESSION['cart']);
 $total = 0;
 foreach ( $_SESSION['cart'] as $ino) {
     ?>
