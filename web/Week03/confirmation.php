@@ -23,7 +23,7 @@ Shipping Info:<br>
 	echo "test";
 	echo "Name: " . $_SESSION["custName"] . ".<br>";
 	echo "Address: " . $_SESSION["custAddress"] . ".<br>";
-	echo "City: " . $_SESSION['custCity'] . "State: " . $_SESSION['custState'] . "Zip: " . $_SESSION['custZip'] .;
+	//echo "City: " . $_SESSION['custCity'] . "State: " . $_SESSION['custState'] . "Zip: " . $_SESSION['custZip'] .;
 
 
 $total = 0;
