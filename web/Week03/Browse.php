@@ -14,8 +14,6 @@ if (isset ( $_POST ["buy"] )) {
 	$Price = $_POST['price'];
 	$Qty = $_POST['qty'];
 
-foreach ( $_SESSION['cart'] as $ino) {
-
 
 	$items = array('name' => "$Name", 'price' => "$Price", 'qty' => "$Qty");
 
