@@ -29,7 +29,7 @@ foreach ( $_SESSION['cart'] as $ino ) {
     ?>
 <tr>
     <td>
-        Name: <?php echo $items[$ino]['name']; ?>
+        Name: <?php echo $_SESSION['cart'][$ino]['name']; ?>
     </td>
     <td>
         Price: <?php echo $items[$ino]["price"]; ?>
