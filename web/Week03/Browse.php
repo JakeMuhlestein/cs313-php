@@ -8,7 +8,8 @@ $_SESSION['cart']=array();
 <html>
 <head>
 
-	<title></title>
+	<title>Browse Items</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" type="text/css" href="week03.css">
 </head>
 <body>
@@ -23,7 +24,7 @@ $_SESSION['cart']=array();
 
 	<h2>Store</h2>
 
-	<form action="ViewCart.php" method="post">
+	<form action="viewCart.php" method="post">
 		<table>
 			<tr>
 				<th>Item Name</th>
