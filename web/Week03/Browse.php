@@ -1,10 +1,22 @@
 <?php
 session_start();
-$_SESSION['cart']=array();
-$_SESSION['amount']=array();
-$_SESSION['qty']=array();
-$_SESSION['total']=array();
+if (! isset ( $_SESSION ['cart'] )) {
+    $_SESSION ['cart'] = array ();
+}
+
+// Add
+if (isset ( $_POST ["buy"] )) {
+    // Check the item is not already in the cart
+    if (!in_array($_POST ["buy"], $_SESSION['cart'])) {
+        // Add new item to cart
+        $_SESSION ['cart'][] = $_POST["buy"];
+    }
+}
+
+
 ?>
+
+
 
 
 <html>
@@ -26,7 +38,7 @@ $_SESSION['total']=array();
 
 	<h2>Store</h2>
 
-	<form action="viewCart.php" method="post">
+	<form action='<?php echo $_SERVER['PHP_SELF']; ?>' method="post">
 		<table>
 			<tr>
 				<th>Item Name</th>
