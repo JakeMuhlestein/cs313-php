@@ -3,11 +3,11 @@ session_start();
 
 
 $items = array (
-        'A123' => array (
+        
                 'name' => 'Pencil',
                 'desc' => 'Writes Stuff',
                 'price' => 1000 
-        )
+        
     );
 
 if (! isset ( $_SESSION ['cart'] )) {
