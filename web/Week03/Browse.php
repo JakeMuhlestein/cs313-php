@@ -10,7 +10,7 @@ $items = array (
     );
 
 if (! isset ( $_SESSION ['cart'] )) {
-    $_SESSION ['cart'] = $items;
+    $_SESSION ['cart'] = array ();
 }
 
 
@@ -19,7 +19,7 @@ if (isset ( $_POST ["buy"] )) {
     // Check the item is not already in the cart
     //if (!in_array($_POST ["buy"], $_SESSION['cart'])) {
         // Add new item to cart
-        $_SESSION ['cart'] = $_POST['price'];
+        $_SESSION ['cart'] = $_POST;
     //}
 }
 
@@ -50,6 +50,29 @@ if (isset ( $_POST ["buy"] )) {
 	<h2>Store</h2>
 
 	<form action='<?php echo $_SERVER['PHP_SELF']; ?>' method="post">
+
+ <?php
+        foreach ( $items as $ino => $item ) {
+            $title = $item ['name'];
+            $desc = $item ['desc'];
+            $price = $item ['price'];
+
+            echo " <p>$title</p>";
+            echo " <p>$desc</p>";
+            echo "<p>\$$price</p>";
+
+            if ($_SESSION ['cart'] == $ino) {
+                echo '<img src="carticon.png">';
+                echo "<p><button type='submit' name='delete' value='$ino'>Remove</button></p>";
+            } else {
+                echo "<button type='submit' name='buy' value='$ino'>Buy</button> ";
+            }
+        }
+    ?>
+
+
+	</form>
+<!--
 		<table>
 			<tr>
 				<th>Item Name</th>
@@ -87,7 +110,7 @@ if (isset ( $_POST ["buy"] )) {
 			</tr>						
 		</table>
 	</form>
-
+-->
 
 </body>
 </html>
