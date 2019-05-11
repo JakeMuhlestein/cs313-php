@@ -57,7 +57,7 @@ if (isset ( $_POST ["buy"] )) {
 
 
 
-		Name<input type="hidden" id="book" name="book" value="Book">
+		Name<input type="hidden" id="book" name="name" value="Book">
 		Price<input type="hidden" id="price" name="price" value="10">
 		Qty<input type="hidden" id="price" name="qty" value="2">
 		<button type='submit' name='buy' value='$ino'>Buy</button>
