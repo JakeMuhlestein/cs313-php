@@ -16,7 +16,7 @@ if (isset ( $_POST ["buy"] )) {
 
 if (isset($_POST['buy']))
 {
-    $getmsg = $_POST['hiddenInput'];
+    $getmsg = $_POST['cart'];
     echo $getmsg;
 }
 
