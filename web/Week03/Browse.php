@@ -2,7 +2,7 @@
 session_start();
 
 
-items = array (
+$items = array (
         'A123' => array (
                 'name' => 'Item1',
                 'desc' => 'Item 1 description...',
