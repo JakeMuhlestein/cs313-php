@@ -59,12 +59,15 @@ if (isset ( $_POST ["buy"] )) {
 		Qty<input type="hidden" id="price" name="qty" value="2">
 		<button type='submit' name='buy' value='$ino'>Buy</button>
 
+
+
+	</form>
+
+	<form action='<?php echo $_SERVER['PHP_SELF']; ?>' method="post">
 		Name<input type="hidden" id="book" name="name" value="Map">
 		Price<input type="hidden" id="price" name="price" value="35">
 		Qty<input type="hidden" id="price" name="qty" value="1">
 		<button type='submit' name='buy' value='$ino'>Buy</button>
-
-
 	</form>
 <?php
 echo json_encode($_SESSION['cart']);
