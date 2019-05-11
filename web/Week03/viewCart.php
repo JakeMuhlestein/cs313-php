@@ -16,7 +16,7 @@ if (isset ( $_POST ['delete'] )) { // a remove button has been clicked
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Cart</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" type="text/css" href="week03.css">
 </head>

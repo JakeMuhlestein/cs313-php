@@ -5,18 +5,25 @@ session_start();
 
 if (isset($_POST['cart'])){
   header("Location: viewCart.php");
+
+
 }
 ?>
 <?php
 if (isset($_POST['submit'])){
   header("Location: confirmation.php");
+  $_SESSION['custName'] = $_POST['name'];
+  $_SESSION['custAddress'] = $_POST['address'];
+  $_SESSION['custCity'] = $_POST['city'];
+  $_SESSION['custState'] = $_POST['state'];
+  $_SESSION['custZip'] = $_POST['zip'];
 }
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Check Out</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" type="text/css" href="week03.css">
 </head>
@@ -41,6 +48,7 @@ if (isset($_POST['submit'])){
 	<form action='<?php echo $_SERVER['PHP_SELF']; ?>' method="post">
 		<input type="submit" id="submit" name="submit" value="Submit Order">
 	</form>
+
 
 
 

@@ -34,7 +34,7 @@ if (isset ( $_POST ["buy"] )) {
 <html>
 <head>
 
-	<title>Browse Items</title>
+	<title>School Supply Store</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" type="text/css" href="week03.css">
 </head>
@@ -49,7 +49,7 @@ if (isset ( $_POST ["buy"] )) {
 
 
 
-	<h2>Store</h2>
+	<h2>School Supply Store</h2>
 
 	<form action='<?php echo $_SERVER['PHP_SELF']; ?>' method="post">
 		Item: Book<input type="hidden" id="book" name="name" value="Book">
