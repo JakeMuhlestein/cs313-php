@@ -14,8 +14,8 @@
 	</ul>
 
 	<?php
-	echo $_SESSION['cart']['price'];
-	print_r($_SESSION['cart']);
+
+	print_r($_SESSION);
 	// Set a default total
 	$total = 0;
 	foreach ( $_SESSION['cart'] as $ino ) {
