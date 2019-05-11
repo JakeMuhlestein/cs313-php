@@ -67,6 +67,7 @@ foreach ( $_SESSION['cart'] as $ino) {
     ?>
 <tr>
     <td>
+    	<?php print_r($_POST['$ino']) ; ?>
         Name: <?php echo $ino['name']; ?>
     </td>
     <td>
