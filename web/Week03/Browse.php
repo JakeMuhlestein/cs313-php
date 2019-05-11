@@ -14,20 +14,24 @@ if (isset ( $_POST ["buy"] )) {
 	$Price = $_POST['price'];
 	$Qty = $_POST['qty'];
 
+foreach ( $_SESSION['cart'] as $ino) {
+
+	if( $ino['name'] == $Name ) {
+	} else {
+    
 	$items = array('name' => "$Name", 'price' => "$Price", 'qty' => "$Qty");
 
     // Check the item is not already in the cart
     //<?php
-		foreach ( $_SESSION['cart'] as $ino) {
-    
+
 
         // Add new item to cart
        
-    
+    array_push($_SESSION ['cart'] ,$items); 
    
 	} // end foreach
 	//
-	array_push($_SESSION ['cart'] ,$items); 
+	
 }
 
 ?>
