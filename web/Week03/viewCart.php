@@ -22,7 +22,7 @@ session_start();
 	</ul>
 
 <?php
-print_r($_SESSION['cart']);
+echo json_encode($_SESSION['cart']);
 // Set a default total
 $total = 0;
 foreach ( $_SESSION['cart'] as $ino ) {
