@@ -2,6 +2,8 @@
 <html>
 <head>
 	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" type="text/css" href="week03.css">
 </head>
 <body>
 
@@ -10,7 +12,7 @@
   		<li><a href="viewCart.php">Cart</a></li>
   		<li><a href="checkOut.php">Checkout</a></li>
 	</ul>
-	
+
 	<?php
 	print_r($_SESSION['cart']);
 	// Set a default total
