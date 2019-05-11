@@ -24,12 +24,6 @@ if (isset ( $_POST ["buy"] )) {
 }
 
 
-if (isset($_POST['buy']))
-{
-    $getmsg = $_POST['cart'];
-    echo $getmsg;
-}
-
 
 ?>
 
@@ -58,37 +52,37 @@ if (isset($_POST['buy']))
 	<form action='<?php echo $_SERVER['PHP_SELF']; ?>' method="post">
 		<table>
 			<tr>
-				<th id="name">Item Name</th>
-				<th id="desc">Brief Desc.</th>
-				<th id="price">Price</th>
+				<th>Item Name</th>
+				<th>Brief Desc.</th>
+				<th>Price</th>
 				<th id="qty">Quantity</th>
 			</tr>
 			<tr>
-				<td headers="name">Calander</td>
-				<td headers="desc">12 months</td>
-				<td headers="price">$12.00</td>
-				<td headers="qty"><input type="text" name="qtyCal"></ins></td>
+				<td>Calander<input type="hidden" name="name" value="Calander" /></td>
+				<td>12 months<input type="hidden" name="desc" value="12 months" /></td>
+				<td>$12.00<input type="hidden" name="price" value="12" /></td>
+				<td><input type="text" name="qtyCal"></input></td>
 				<td><button type='submit' name='buy' value='$ino'>Add to Cart</button></td>
 			</tr>
 			<tr>
 				<td>Book</td>
 				<td>Lots of pages</td>
 				<td>$15.00</td>
-				<td><input type="text" name="qtyBook"></ins></td>
+				<td><input type="text" name="qtyBook"></input></td>
 				<td><button type='submit' name='buy' value='$ino'>Add to Cart</button></td>
 			</tr>
 			<tr>
 				<td>Globe</td>
 				<td>It's a sphere</td>
 				<td>$36.00</td>
-				<td><input type="text" name="qtyGlobe"></ins></td>
+				<td><input type="text" name="qtyGlobe"></input></td>
 				<td><button type='submit' name='buy' value='$ino'>Add to Cart</button></td>
 			</tr>
 			<tr>
 				<td>Pencil</td>
 				<td>Writes Stuff</td>
 				<td>$1.00</td>
-				<td><input type="text" name="qtyPencil"></ins></td>
+				<td><input type="text" name="qtyPencil"></input></td>
 				<td><button type='submit' name='buy' value='$ino'>Add to Cart</button></td>
 			</tr>						
 		</table>
