@@ -44,6 +44,5 @@ foreach ( $_SESSION['cart'] as $ino) {
 
 Total: $<?php echo $total; ?>
 
-Total: $<?php echo $total; ?>
 </body>
 </html>

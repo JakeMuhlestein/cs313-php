@@ -46,7 +46,7 @@ if (isset ( $_POST ["buy"] )) {
 
 	<form action='<?php echo $_SERVER['PHP_SELF']; ?>' method="post">
 		Item: Book<input type="hidden" id="book" name="name" value="Book">
-		Price<input type="hidden" id="price" name="price" value="10">
+		Price: $10.00 <input type="hidden" id="price" name="price" value="10">
 		Qty<input type="hidden" id="price" name="qty" value="2">
 		<button type='submit' name='buy' value='$ino'>Buy</button>
 	</form>
@@ -57,28 +57,7 @@ if (isset ( $_POST ["buy"] )) {
 		Qty<input type="hidden" id="price" name="qty" value="1">
 		<button type='submit' name='buy' value='$ino'>Buy</button>
 	</form>
-<?php
-$total = 0;
-foreach ( $_SESSION['cart'] as $ino) {
-    ?>
-<tr>
-    <td>
 
-        Name: <?php echo $ino['name']; ?>
-    </td>
-    <td>
-        Price: <?php echo $ino['price']; ?>
-    </td>
-    <td>
-        <button type='submit' name='delete' value='<?php echo $ino; ?>'>Remove</button><br>
-    </td>
-</tr>
-<?php
-    $total += $ino['price'];
-} // end foreach
-?>
-
-Total: $<?php echo $total; ?>
 <!--
 		<table>
 			<tr>
