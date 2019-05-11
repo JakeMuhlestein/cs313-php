@@ -45,28 +45,11 @@ if (isset ( $_POST ["buy"] )) {
 
 	<form action='<?php echo $_SERVER['PHP_SELF']; ?>' method="post">
 
-<?php
-        foreach ( $items as $ino => $item ) {
-            $title = $item ['name'];
-            $desc = $item ['desc'];
-            $price = $item ['price'];
 
-            echo " <p>$title</p>";
-            echo " <p>$desc</p>";
-            echo "<p>\$$price</p>";
 
-            if ($_SESSION ['cart'] == $ino) {
-                echo '<img src="carticon.png">';
-                echo "<p><button type='submit' name='delete' value='$ino'>Remove</button></p>";
-            } else {
-                echo "<button type='submit' name='buy' value='$ino'>Buy</button> ";
-            }
-        }
-    ?>
-
-		<!--<p>Item: Book<input type="hidden" id="name" name="Book" value="Book" /></p>
+		<p>Item: Book<input type="hidden" id="name" name="Book" value="Book" /></p>
 		<p>Price: $10.00 <input type="hidden" id="price" name="10" value='10' /></p>
-		<button type='submit' name='buy' value='$ino'>Buy</button>-->
+		<button type='submit' name='buy' value='$ino'>Buy</button>
 
 	</form>
 <!--

@@ -25,7 +25,7 @@ session_start();
 echo json_encode($_SESSION['cart']);
 // Set a default total
 $total = 0;
-foreach ( $_SESSION['cart'] as $ino ) {
+foreach ( $_SESSION['cart'] as $ino) {
     ?>
 <tr>
     <td>
