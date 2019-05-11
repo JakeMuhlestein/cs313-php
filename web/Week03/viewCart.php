@@ -19,7 +19,7 @@ session_start();
 	</ul>
 
 <?php
-print_r($_SESSION['cart'];
+print_r($_SESSION['cart']);
 // Set a default total
 $total = 0;
 foreach ( $_SESSION['cart'] as $ino ) {
