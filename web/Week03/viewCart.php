@@ -3,16 +3,6 @@ session_start();
 
 if (isset ( $_POST ['delete'] )) { // a remove button has been clicked
     // Remove the item from the cart
-    foreach ($_SESSION['cart'] as $current_key => $current_array) {
-    echo "current key: $current_key\n";
-    foreach ($arrays as $search_key => $search_array) {
-        if ($search_array['name'] == $current_array['name']) {
-            if ($search_key != $current_key) {
-            echo "duplicate found: $search_key\n";
-            }
-        }
-    }
-    echo "\n";
 
     if (false !== $key = array_search($_POST['delete'], $_SESSION['cart'])) {
         unset($_SESSION['cart'][$key]);
