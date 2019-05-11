@@ -2,13 +2,6 @@
 session_start();
 
 
-$items = array (
-        'A123' => array (
-                'name' => 'Pencil',
-                'desc' => 'Writes Stuff',
-                'price' => 1000 
-        )
-    );
 
 if (! isset ( $_SESSION ['cart'] )) {
     $_SESSION ['cart'] = array();
@@ -21,9 +14,7 @@ if (isset ( $_POST ["buy"] )) {
 	$Price = $_POST['price'];
 	$Qty = $_POST['qty'];
 
-	$items = array('name' => "$Name", 'price' => "$Price", 'qty' => "$Qty"
-		//array('name' => "$Name", 'price' => "$Price", 'qty' => "$Qty")
-	);
+	$items = array('name' => "$Name", 'price' => "$Price", 'qty' => "$Qty");
 
     // Check the item is not already in the cart
     if (!in_array($_POST ["buy"], $_SESSION['cart'])) {
@@ -54,7 +45,7 @@ if (isset ( $_POST ["buy"] )) {
 	<h2>Store</h2>
 
 	<form action='<?php echo $_SERVER['PHP_SELF']; ?>' method="post">
-		Name<input type="hidden" id="book" name="name" value="Book">
+		Item: Book<input type="hidden" id="book" name="name" value="Book">
 		Price<input type="hidden" id="price" name="price" value="10">
 		Qty<input type="hidden" id="price" name="qty" value="2">
 		<button type='submit' name='buy' value='$ino'>Buy</button>
@@ -74,7 +65,7 @@ foreach ( $_SESSION['cart'] as $ino) {
 <tr>
     <td>
 
-        Name: <?php echo $items[$ino]['name']; ?>
+        Name: <?php echo $ino['name']; ?>
     </td>
     <td>
         Price: <?php echo $ino['price']; ?>
