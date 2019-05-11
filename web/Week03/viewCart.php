@@ -38,5 +38,8 @@
 	?>
 
 	Total: $<?php echo $total; ?>
+	<?php
+	print_r($_SESSION['cart']);
+	?>
 </body>
 </html>
