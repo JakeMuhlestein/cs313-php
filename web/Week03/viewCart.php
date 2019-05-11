@@ -15,6 +15,7 @@
 
 	<?php
 
+	Array:
 	print_r($_SESSION['cart']);
 	// Set a default total
 	$total = 0;
