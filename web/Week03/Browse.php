@@ -13,6 +13,7 @@ if (! isset ( $_SESSION ['cart'] )) {
     $_SESSION ['cart'] = $items;
 }
 
+$_SESSION["price"] = "30";
 
 // Add
 if (isset ( $_POST ["buy"] )) {
