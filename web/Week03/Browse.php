@@ -16,9 +16,7 @@ if (isset ( $_POST ["buy"] )) {
 
 foreach ( $_SESSION['cart'] as $ino) {
 
-	if( $ino['name'] == $Name ) {
-	} else {
-    
+
 	$items = array('name' => "$Name", 'price' => "$Price", 'qty' => "$Qty");
 
     // Check the item is not already in the cart
@@ -29,7 +27,7 @@ foreach ( $_SESSION['cart'] as $ino) {
        
     array_push($_SESSION ['cart'] ,$items); 
    
-	} // end foreach
+	 // end foreach
 	//
 	
 }
