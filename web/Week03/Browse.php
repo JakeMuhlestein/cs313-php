@@ -1,6 +1,6 @@
 <?php
 session_start();
-?>
+
 
 items = array (
         'A123' => array (
@@ -13,7 +13,7 @@ items = array (
 if (! isset ( $_SESSION ['cart'] )) {
     $_SESSION ['cart'] = array ();
 }
-
+?>
 <html>
 <head>
 
