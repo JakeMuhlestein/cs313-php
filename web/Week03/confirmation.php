@@ -19,9 +19,9 @@
 
 Shipping Info:<br>
 <?php
-echo "Name: " . $_SESSION["custName"] . ".<br>";
-echo "Address: " . $_SESSION["custAddress"] . ".<br>";
-echo "City: " . $_SESSION["custCity"] . "State: " . $_SESSION["custState"] . "Zip: " . $_SESSION["custZip"];
+echo "Name: " . $_SESSION['custName'] . ".<br>";
+echo "Address: " . $_SESSION['custAddress'] . ".<br>";
+echo "City: " . $_SESSION['custCity'] . "State: " . $_SESSION['custState'] . "Zip: " . $_SESSION['custZip'];
 
 
 $total = 0;
@@ -35,10 +35,8 @@ foreach ( $_SESSION['cart'] as $ino) {
     <td>
         Price: <?php echo $ino['price']; ?>
     </td>
-    <td>
-        <button type='submit' name='delete' value='<?php echo $ino; ?>'>Remove</button><br>
-    </td>
 </tr>
+<br>
 <?php
     $total += $ino['price'];
 } // end foreach
