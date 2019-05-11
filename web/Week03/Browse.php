@@ -4,8 +4,8 @@ session_start();
 
 $items = array (
         'A123' => array (
-                'name' => 'Item1',
-                'desc' => 'Item 1 description...',
+                'name' => 'Pencil',
+                'desc' => 'Writes Stuff',
                 'price' => 1000 
         )
     );
@@ -45,8 +45,8 @@ if (isset ( $_POST ["buy"] )) {
 
 	<form action='<?php echo $_SERVER['PHP_SELF']; ?>' method="post">
 
-		<p>Book<input type="hidden" name="name" value="Book" /></p>
-		<p>Price:<input type="hidden" name="price" value="10" /></p>
+		<p>Book<input type="hidden" name="name" value='Book' /></p>
+		<p>Price:<input type="hidden" name="price" value='10' /></p>
 		<button type='submit' name='buy' value='$ino'>Buy</button>
 
 	</form>
