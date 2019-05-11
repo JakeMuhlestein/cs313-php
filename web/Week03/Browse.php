@@ -10,7 +10,7 @@ $items = array (
                 'desc' => 'Item 1 description...',
                 'price' => 1000 
         )
-    )
+    );
 
 // Add
 if (isset ( $_POST ["buy"] )) {
