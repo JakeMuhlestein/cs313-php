@@ -26,8 +26,8 @@ if (isset ( $_POST ["buy"] )) {
     
    
 	//} // end foreach
-	//?>
-	<?php  array_push($_SESSION ['cart'] ,$items); ?>
+	//
+	array_push($_SESSION ['cart'] ,$items); 
 }
 
 ?>
