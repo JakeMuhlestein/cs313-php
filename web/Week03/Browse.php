@@ -67,17 +67,17 @@ if (isset ( $_POST ["buy"] )) {
 		<button type='submit' name='buy' value='$ino'>Buy</button>
 	</form>
 <?php
-print_r($_SESSION['cart'][0]);
+print_r($_SESSION['cart']);
 $total = 0;
-foreach ( $_SESSION['cart'] as $ino => $item) {
+foreach ( $_SESSION['cart'] as $ino) {
     ?>
 <tr>
     <td>
 
-        Name: <?php echo $item['name']; ?>
+        Name: <?php echo $ino[]['name']; ?>
     </td>
     <td>
-        Price: <?php echo $item['price']; ?>
+        Price: <?php echo $ino[]['price']; ?>
     </td>
     <td>
         <button type='submit' name='delete' value='<?php echo $ino; ?>'>Remove</button><br>
