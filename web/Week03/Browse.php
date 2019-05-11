@@ -21,8 +21,8 @@ if (isset ( $_POST ["buy"] )) {
 	$Price = $_POST['price'];
 	$Qty = $_POST['qty'];
 
-	$items = array(
-		array('name' => "$Name", 'price' => "$Price", 'qty' => "$Qty")
+	$items = array('name' => "$Name", 'price' => "$Price", 'qty' => "$Qty"
+		//array('name' => "$Name", 'price' => "$Price", 'qty' => "$Qty")
 	);
 
     // Check the item is not already in the cart
