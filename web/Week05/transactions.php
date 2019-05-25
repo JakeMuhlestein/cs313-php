@@ -37,7 +37,7 @@ foreach ($db->query($query) as $row) {
     echo '<strong>' . $row['vend_id'] . '</strong>' . '&nbsp;';
     echo '<strong>' . $row['payment_id'] . '</strong>' . '&nbsp;';
     echo '<strong>' . $row['amount'] . '</strong>' . '&nbsp;';
-    echo '<br />';
+    echo '<br/>';
 }
 
 
