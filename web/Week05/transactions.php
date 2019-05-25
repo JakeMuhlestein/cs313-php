@@ -23,10 +23,11 @@ $query = "SELECT *
             //WHERE LOWER(book)=" ."LOWER('" . $book ."')";
 foreach ($db->query($query) as $row) {
     $id = $row['id'];
-    echo '<strong>' . $row['budget_id'] . '</strong>' . '&nbsp;';
-    echo '<strong>' . $row['date'] . '</strong>' . ':';
+    echo '<strong>' . $row['date'] . '</strong>' . '&nbsp;';
+    echo '<strong>' . $row['budget_id'] . '</strong>' . ':';
     echo '<strong>' . $row['vend_id'] . '</strong>' . '&nbsp;';
     echo '<strong>' . $row['payment_id'] . '</strong>' . '&nbsp;';
+    echo '<strong>' . $row['amount'] . '</strong>' . '&nbsp;';
    
 }
 

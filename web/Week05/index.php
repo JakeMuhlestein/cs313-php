@@ -39,7 +39,7 @@ foreach ($db->query($query) as $row) {
 
 ?>
 
-<a class="m-3" href="enterExp.php">Enter New Expense</a>
+<a class="m-3" href="enterExp.php">Enter New Expense</a><br />
 <a class="m-3" href="transactions.php">See Transactions</a>
 
 </body>
