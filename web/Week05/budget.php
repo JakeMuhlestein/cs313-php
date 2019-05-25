@@ -25,7 +25,25 @@ include("dbconnection.php");
 
 <h1>Budget</h1>
 
+
+<form class="m-3 form-group mx-auto" action="" method="post">
+    Budget: 
+    <select name="budgetCategories">
+    	<option>Select Budget</option>
+		<?php
+    		foreach ($db->query($budgetCat) as $row) {
+   			echo "<option value=\"{$row['budget_name']}\">{$row['budget_name']}</option>";
+    
+			}
+		?>
+	</select><br /><br />
+    <input class="btn btn-success m-2" type="submit" value="Search">
+</form>
+
 <?php
+	
+	$budget = $_POST['budgetCategories'];
+
 	$query = "SELECT * FROM transaction where budget_id = 1"; 
 
 	foreach ($db->query($query) as $row) {
