@@ -20,18 +20,19 @@ $budgetCat = "SELECT * FROM budget_item";
 <body >
 	Enter Exp: <br />
     <form class="m-3 form-group mx-auto" action="" method="post">
-    
-
-
-    <input class="btn btn-success m-2" type="submit" value="Search">
-    </form>
-<?php
+    <select name="budgetCategories">
+	<?php
     foreach ($db->query($budgetCat) as $row) {
     $id = $row['id'];
-    echo '<a class="m-3" href="detail.php?id='.$id. '">';
     echo '<strong>' . $row['budget_name'] . '</strong>' . '&nbsp;';
     echo '</a><br>';
 	}
 	?>
+	</select>
+
+
+    <input class="btn btn-success m-2" type="submit" value="Enter Expense">
+    </form>
+
 </body>
 </html>
