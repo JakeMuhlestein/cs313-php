@@ -35,10 +35,11 @@ foreach ($db->query($query) as $row) {
     echo '</a><br>';
 }
 
-echo '<a class="m-3" href="enterExp.php">';
+
 
 ?>
 
+<a class="m-3" href="enterExp.php">Enter New Expense</a>;
 
 </body>
 </html>
