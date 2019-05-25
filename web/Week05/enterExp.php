@@ -21,6 +21,7 @@ $budgetCat = "SELECT budget_name FROM budget_item";
 	Enter Exp: <br />
     <form class="m-3 form-group mx-auto" action="" method="post">
     <select name="budgetCategories">
+    	<option>Select Budget</option>
 	<?php
     foreach ($db->query($budgetCat) as $row) {
 	//while ($rows = $budgetCat->fetch_assoc()) {
@@ -28,7 +29,7 @@ $budgetCat = "SELECT budget_name FROM budget_item";
 		//$cat_name = $rows['budget_name'];
 		//echo "<option value='$budget_name'>$cat_name</";
 
-    echo '<strong>' . $row['budget_name'] . '</strong>' . '&nbsp;';
+   echo "<option value=\"{$row['budget_name']}\">{$row['budget_name']}</option>";
     //echo '</a><br>';
 	}
 	?>
