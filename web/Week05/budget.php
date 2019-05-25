@@ -48,7 +48,7 @@ $budgetCat = "SELECT budget_name FROM budget_item";
 	$query = "SELECT * FROM transaction AS t
 		JOIN budget_item AS b
 		ON t.budget_id = b.id
-		WHERE t.budget_id = 1"; 
+		WHERE b.budget_name = $budget"; 
 
 	foreach ($db->query($query) as $row) {
     $id = $row['id'];
