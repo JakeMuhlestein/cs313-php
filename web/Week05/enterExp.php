@@ -1,5 +1,8 @@
 <?php
 include("dbconnection.php");
+
+$budgetCat = "SELECT * FROM budget_item"; 
+
 ?>
 
 <!DOCTYPE html>
@@ -15,9 +18,20 @@ include("dbconnection.php");
   <title>Document</title>
 </head>
 <body >
+	Enter Exp: <br />
     <form class="m-3 form-group mx-auto" action="" method="post">
-    Book: <input class="m-2" type="text" name="book"><br>
+    
+
+
     <input class="btn btn-success m-2" type="submit" value="Search">
     </form>
+<?php
+    foreach ($db->query($budgetCar) as $row) {
+    $id = $row['id'];
+    echo '<a class="m-3" href="detail.php?id='.$id. '">';
+    echo '<strong>' . $row['budget_name'] . '</strong>' . '&nbsp;';
+    echo '</a><br>';
+	}
+	?>
 </body>
 </html>
