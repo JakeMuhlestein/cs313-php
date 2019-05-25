@@ -45,7 +45,10 @@ $budgetCat = "SELECT budget_name FROM budget_item";
 	
 	$budget = $_POST['budgetCategories'];
 
-	$query = "SELECT * FROM transaction where budget_id = 1"; 
+	$query = "SELECT * FROM transaction AS t
+		JOIN budget_item AS b
+		ON t.id = b.budget_id
+		WHERE budget_id = $budget"; 
 
 	foreach ($db->query($query) as $row) {
     $id = $row['id'];
