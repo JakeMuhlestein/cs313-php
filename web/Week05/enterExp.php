@@ -22,6 +22,7 @@ $vendor = "SELECT vendor_name FROM vendors";
 <body >
 	Enter Exp: <br />
     <form class="m-3 form-group mx-auto" action="" method="post">
+    Budget:  
     <select name="budgetCategories">
     	<option>Select Budget</option>
 		<?php
@@ -30,7 +31,8 @@ $vendor = "SELECT vendor_name FROM vendors";
     
 			}
 		?>
-	</select><br />
+	</select><br /><br />
+	Pay Method:  
 	    <select name="payType">
     	<option>Select Payment</option>
 		<?php
@@ -39,7 +41,8 @@ $vendor = "SELECT vendor_name FROM vendors";
     
 			}
 		?>
-	</select><br />
+	</select><br /><br />
+	Vendor:  
 	    <select name="vendor">
     	<option>Select Vendor</option>
 		<?php
@@ -48,7 +51,9 @@ $vendor = "SELECT vendor_name FROM vendors";
     
 			}
 		?>
-	</select><br />
+	</select><br /><br />
+	Amount:  
+	<input type="test" name="amount"><br /><br />
 
 
     <input class="btn btn-success m-2" type="submit" value="Enter Expense">
