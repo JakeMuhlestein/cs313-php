@@ -44,6 +44,7 @@ $budgetCat = "SELECT budget_name FROM budget_item";
 <?php
 	
 	$budget = $_POST['budgetCategories'];
+	echo $budget;
 
 	$query = "SELECT * FROM transaction AS t
 		JOIN budget_item AS b
