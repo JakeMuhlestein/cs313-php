@@ -21,8 +21,23 @@ include("dbconnection.php");
       <li><a href="transactions.php">Transactions</a></li>
       <li><a class="active" href="budget.php">Budgets</a></li>
       <li><a href="update.php">Update</a></li>
-
   	</ul>
+
 <h1>Budget</h1>
+
+<?php
+	$query = "SELECT * FROM transaction where budget_id = 1"; 
+
+	foreach ($db->query($query) as $row) {
+    $id = $row['id'];
+    echo '<strong>' . $row['date'] . '</strong>' . '&nbsp;';
+    echo '<strong>' . $row['budget_id'] . '</strong>' . ':';
+    echo '<strong>' . $row['vend_id'] . '</strong>' . '&nbsp;';
+    echo '<strong>' . $row['payment_id'] . '</strong>' . '&nbsp;';
+    echo '<strong>' . $row['amount'] . '</strong>' . '&nbsp;';
+   
+}
+?>
+
 </body>
 </html>
