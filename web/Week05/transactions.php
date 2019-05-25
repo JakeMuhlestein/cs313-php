@@ -15,32 +15,23 @@ include("dbconnection.php");
   <title>Document</title>
 </head>
 <body >
-    <form class="m-3 form-group mx-auto" action="" method="post">
-    Book: <input class="m-2" type="text" name="book"><br>
-    <input class="btn btn-success m-2" type="submit" value="Search">
-    </form>
- 
+
 <?php
-$book = $_POST['book'];          
+//$transactions = $_POST['book'];          
 $query = "SELECT * 
-            FROM scriptures_table"; 
+            FROM transaction"; 
             //WHERE LOWER(book)=" ."LOWER('" . $book ."')";
 foreach ($db->query($query) as $row) {
     $id = $row['id'];
-    echo '<a class="m-3" href="detail.php?id='.$id. '">';
-    echo '<strong>' . $row['book'] . '</strong>' . '&nbsp;';
-    echo '<strong>' . $row['chapter'] . '</strong>' . ':';
-    
-    echo '<strong>' . $row['verse'] . '</strong>' . '&nbsp;';
-    echo '</a><br>';
+    echo '<strong>' . $row['budget_id'] . '</strong>' . '&nbsp;';
+    echo '<strong>' . $row['date'] . '</strong>' . ':';
+    echo '<strong>' . $row['vend_id'] . '</strong>' . '&nbsp;';
+    echo '<strong>' . $row['payment_id'] . '</strong>' . '&nbsp;';
+   
 }
 
 
 
 ?>
-
-<a class="m-3" href="enterExp.php">Enter New Expense</a>
-<a class="m-3" href="transactions.php">See Transactions</a>
-
 </body>
 </html>
