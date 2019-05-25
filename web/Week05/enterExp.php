@@ -26,7 +26,7 @@ $budgetCat = "SELECT * FROM budget_item";
     <input class="btn btn-success m-2" type="submit" value="Search">
     </form>
 <?php
-    foreach ($db->query($budgetCar) as $row) {
+    foreach ($db->query($budgetCat) as $row) {
     $id = $row['id'];
     echo '<a class="m-3" href="detail.php?id='.$id. '">';
     echo '<strong>' . $row['budget_name'] . '</strong>' . '&nbsp;';
