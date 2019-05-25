@@ -27,7 +27,7 @@ $query = "SELECT *
             WHERE LOWER(book)=" ."LOWER('" . $book ."')";
 foreach ($db->query($query) as $row) {
     $id = $row['id'];
-    echo '<a class="m-3" href="details.php?id='.$id. '">';
+    echo '<a class="m-3" href="detail.php?id='.$id. '">';
     echo '<strong>' . $row['book'] . '</strong>' . '&nbsp;';
     echo '<strong>' . $row['chapter'] . '</strong>' . ':';
     
