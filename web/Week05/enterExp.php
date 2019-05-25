@@ -20,7 +20,7 @@ $vendor = "SELECT vendor_name FROM vendors";
   <title>Document</title>
 </head>
 <body >
-	Enter Exp: <br />
+	<h1>Enter Expenses</h1> <br />
     <form class="m-3 form-group mx-auto" action="" method="post">
     Budget:  
     <select name="budgetCategories">
