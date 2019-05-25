@@ -13,13 +13,23 @@ $vendor = "SELECT vendor_name FROM vendors";
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+  <link rel="stylesheet" type="text/css" href="week05.css">
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <title>Enter Expense</title>
 </head>
 <body >
+
+	 <ul>
+      <li><a href="index.php">Home</a></li>
+      <li><a class="active" href="enterExp.php">Enter Expenses</a></li>
+      <li><a href="transactions.php">Transactions</a></li>
+      <li><a href="budget.php">Budgets</a></li>
+      <li><a href="update.php">Update</a></li>
+
+  	</ul>
+
 	<h1>Enter Expenses</h1> <br />
     <form class="m-3 form-group mx-auto" action="" method="post">
     Budget:  
@@ -60,7 +70,7 @@ $vendor = "SELECT vendor_name FROM vendors";
 
     </form>
 
-	<br /><br />
+	<br />
 
     <form action="update.php" method="post">
     	<input class="btn btn-success m-2" type="submit" value="Update Form Info">
