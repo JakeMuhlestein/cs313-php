@@ -57,7 +57,20 @@ $vendor = "SELECT vendor_name FROM vendors";
 
 
     <input class="btn btn-success m-2" type="submit" value="Enter Expense">
+
     </form>
+
+	<br /><br />
+
+    <form action="update.php" method="post">
+    	<input class="btn btn-success m-2" type="submit" value="Update Form Info">
+    </form>
+    	
+
+
+    </form>
+
+
 
 </body>
 </html>

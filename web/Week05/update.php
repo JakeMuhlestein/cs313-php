@@ -17,9 +17,9 @@ include("dbconnection.php");
 <body >
 	<h1>Update</h1>
 	<form action="" method="post">
-		Add Budget Item: <input type="text" name="budget"><br />
-		Add Payment Type: <input type="text" name="payment"><br />
-		Add Vendor: <input type="text" name="vendor"><br />
+		Add Budget Item: <input type="text" name="budget"><br /><br />
+		Add Payment Type: <input type="text" name="payment"><br /><br />
+		Add Vendor: <input type="text" name="vendor"><br /><br />
 		<input type="submit" name="Update">
 	</form>
 
