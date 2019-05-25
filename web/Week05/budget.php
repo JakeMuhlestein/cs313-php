@@ -57,7 +57,7 @@ $budgetCat = "SELECT budget_name FROM budget_item";
     echo '<strong>' . $row['vend_id'] . '</strong>' . '&nbsp;';
     echo '<strong>' . $row['payment_id'] . '</strong>' . '&nbsp;';
     echo '<strong>' . $row['amount'] . '</strong>' . '&nbsp;';
-    echo '<be />';
+    echo '<br />';
 }
 ?>
 
