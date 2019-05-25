@@ -23,8 +23,8 @@ include("dbconnection.php");
 <?php
 $book = $_POST['book'];          
 $query = "SELECT * 
-            FROM scriptures_table 
-            WHERE LOWER(book)=" ."LOWER('" . $book ."')";
+            FROM scriptures_table"; 
+            //WHERE LOWER(book)=" ."LOWER('" . $book ."')";
 foreach ($db->query($query) as $row) {
     $id = $row['id'];
     echo '<a class="m-3" href="detail.php?id='.$id. '">';
@@ -39,7 +39,7 @@ foreach ($db->query($query) as $row) {
 
 ?>
 
-<a class="m-3" href="enterExp.php">Enter New Expense</a>;
+<a class="m-3" href="enterExp.php">Enter New Expense</a>
 
 </body>
 </html>
