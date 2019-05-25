@@ -34,6 +34,11 @@ foreach ($db->query($query) as $row) {
     echo '<strong>' . $row['verse'] . '</strong>' . '&nbsp;';
     echo '</a><br>';
 }
+
+echo '<a class="m-3" href="enterExp.php">';
+
 ?>
+
+
 </body>
 </html>
