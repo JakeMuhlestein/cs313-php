@@ -1,25 +1,32 @@
 CREATE TABLE pay_method (
-pay_id int,
-card_name varchar(80)
+id SERIAL,
+card_name VARCHAR(255),
+PRIMARY KEY (id)
 );
 
 CREATE TABLE budget_item (
-budget_id int,
-budget_name varchar(80)
+id SERIAL,
+budget_name VARCHAR (255),
+PRIMARY KEY(id)
 );
 
 
 CREATE TABLE vendors (
-vendor_id int,
-vendor_name varchar(80)
+id SERIAL,
+vendor_name VARCHAR (255),
+PRIMARY KEY(id)
 );
 
 CREATE TABLE transaction (
-trans_id int,
+id SERIAL,
 date date,
 vend_id int,
 payment_id int,
-budget_id int
+budget_id int,
+PRIMARY KEY (id),
+FOREIGN KEY (vend_id) REFERENCES vendors (id),
+FOREIGN KEY (payment_id) REFERENCES pay_method (id),
+FOREIGN KEY (budget_id) REFERENCES budget_item (id)
 );
 
 
