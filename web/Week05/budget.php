@@ -1,5 +1,6 @@
 <?php
 include("dbconnection.php");
+$budgetCat = "SELECT budget_name FROM budget_item"; 
 ?>
 
 <!DOCTYPE html>
