@@ -22,13 +22,13 @@ $budgetCat = "SELECT budget_name FROM budget_item";
     <form class="m-3 form-group mx-auto" action="" method="post">
     <select name="budgetCategories">
 	<?php
-    //foreach ($db->query($budgetCat) as $row) {
-	while ($rows = $budgetCat->fetch_assoc()) {
+    foreach ($db->query($budgetCat) as $row) {
+	//while ($rows = $budgetCat->fetch_assoc()) {
 
-		$cat_name = $rows['budget_name'];
-		echo "<option value='$budget_name'>$cat_name</";
+		//$cat_name = $rows['budget_name'];
+		//echo "<option value='$budget_name'>$cat_name</";
 
-    //echo '<strong>' . $row['budget_name'] . '</strong>' . '&nbsp;';
+    echo '<strong>' . $row['budget_name'] . '</strong>' . '&nbsp;';
     //echo '</a><br>';
 	}
 	?>
