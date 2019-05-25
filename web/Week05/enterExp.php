@@ -2,6 +2,8 @@
 include("dbconnection.php");
 
 $budgetCat = "SELECT budget_name FROM budget_item"; 
+$payment = "SELECT card_name FROM pay_method";
+$vendor = "SELECT vendor_name FROM vendors";
 
 ?>
 
@@ -22,17 +24,30 @@ $budgetCat = "SELECT budget_name FROM budget_item";
     <form class="m-3 form-group mx-auto" action="" method="post">
     <select name="budgetCategories">
     	<option>Select Budget</option>
-	<?php
-    foreach ($db->query($budgetCat) as $row) {
-	//while ($rows = $budgetCat->fetch_assoc()) {
-
-		//$cat_name = $rows['budget_name'];
-		//echo "<option value='$budget_name'>$cat_name</";
-
-   echo "<option value=\"{$row['budget_name']}\">{$row['budget_name']}</option>";
-    //echo '</a><br>';
-	}
-	?>
+		<?php
+    		foreach ($db->query($budgetCat) as $row) {
+   			echo "<option value=\"{$row['budget_name']}\">{$row['budget_name']}</option>";
+    
+			}
+		?>
+	</select><br />
+	    <select name="payType">
+    	<option>Select Payment</option>
+		<?php
+    		foreach ($db->query($payment) as $row) {
+   			echo "<option value=\"{$row['card_name']}\">{$row['card_name']}</option>";
+    
+			}
+		?>
+	</select><br />
+	    <select name="vendor">
+    	<option>Select Vendor</option>
+		<?php
+    		foreach ($db->query($vendor) as $row) {
+   			echo "<option value=\"{$row['vendor_name']}\">{$row['vendor_name']}</option>";
+    
+			}
+		?>
 	</select><br />
 
 
