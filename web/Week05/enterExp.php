@@ -1,7 +1,7 @@
 <?php
 include("dbconnection.php");
 
-$budgetCat = "SELECT * FROM budget_item"; 
+$budgetCat = "SELECT budget_name FROM budget_item"; 
 
 ?>
 
@@ -22,13 +22,17 @@ $budgetCat = "SELECT * FROM budget_item";
     <form class="m-3 form-group mx-auto" action="" method="post">
     <select name="budgetCategories">
 	<?php
-    foreach ($db->query($budgetCat) as $row) {
-    $id = $row['id'];
-    echo '<strong>' . $row['budget_name'] . '</strong>' . '&nbsp;';
-    echo '</a><br>';
+    //foreach ($db->query($budgetCat) as $row) {
+	while ($rows = $budgetCat->fetch_assoc()) {
+
+		$cat_name = $rows['budget_name'];
+		echo "<option value='$budget_name'>$cat_name</";
+
+    //echo '<strong>' . $row['budget_name'] . '</strong>' . '&nbsp;';
+    //echo '</a><br>';
 	}
 	?>
-	</select>
+	</select><br />
 
 
     <input class="btn btn-success m-2" type="submit" value="Enter Expense">
