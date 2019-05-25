@@ -15,29 +15,7 @@ include("dbconnection.php");
   <title>Document</title>
 </head>
 <body >
-    <form class="m-3 form-group mx-auto" action="" method="post">
-    Book: <input class="m-2" type="text" name="book"><br>
-    <input class="btn btn-success m-2" type="submit" value="Search">
-    </form>
- 
-<?php
-$book = $_POST['book'];          
-$query = "SELECT * 
-            FROM scriptures_table"; 
-            //WHERE LOWER(book)=" ."LOWER('" . $book ."')";
-foreach ($db->query($query) as $row) {
-    $id = $row['id'];
-    echo '<a class="m-3" href="detail.php?id='.$id. '">';
-    echo '<strong>' . $row['book'] . '</strong>' . '&nbsp;';
-    echo '<strong>' . $row['chapter'] . '</strong>' . ':';
-    
-    echo '<strong>' . $row['verse'] . '</strong>' . '&nbsp;';
-    echo '</a><br>';
-}
-
-
-
-?>
+<h1>Budget App Menu</h1>
 
 <a class="m-3" href="enterExp.php">Enter New Expense</a><br />
 <a class="m-3" href="transactions.php">See Transactions</a>
