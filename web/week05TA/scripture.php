@@ -6,10 +6,10 @@
 <body>
 
 	<form action="" method="post">
-		<input type="text" name="book"><br />
-		<input type="text" name="chapter"><br />
-		<input type="text" name="verse"><br />
-		<input type="textarea" name="">
+		Book:<input type="text" name="book"><br />
+		Chapter:<input type="text" name="chapter"><br />
+		Verse:<input type="text" name="verse"><br />
+		Text: <textarea name="comment"></textarea>
 
 
 	</form>
