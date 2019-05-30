@@ -23,7 +23,7 @@
             	FROM topic"; 
             	//WHERE LOWER(book)=" ."LOWER('" . $book ."')";
 			foreach ($db->query($query) as $row) {
-   			echo "<input type='checkbox' value=\"{$row['name']}\">{$row['name']}";
+   				echo '<input type="checkbox" name="topic[]" value="' .$row['name'] . '">' . $row['name'].' <br>' ;
     
 			
 			}
