@@ -19,11 +19,11 @@
 
 		<?php
 		//$transactions = $_POST['book'];          
-			$query = "SELECT * 
+			$query = "SELECT name 
             	FROM topic"; 
             	//WHERE LOWER(book)=" ."LOWER('" . $book ."')";
 			foreach ($db->query($query) as $row) {
-   			echo "<input type="checkbox" value=\"{$row['name']}\">{$row['name']}";
+   			echo "<input type='checkbox' value=\"{$row['name']}\">{$row['name']}";
     
 			
 			}
