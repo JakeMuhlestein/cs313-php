@@ -17,18 +17,14 @@
 
 
 
-		<?php
-		//$transactions = $_POST['book'];          
-			$query = "SELECT * 
-            	FROM topic"; 
-            	//WHERE LOWER(book)=" ."LOWER('" . $book ."')";
-			foreach ($db->query($query) as $row) {
-   				echo '<input type="checkbox" name="topic[]" value="' .$row['name'] . '">' . $row['name'].' <br>' ;
+    <?php 
+      $query1 = "SELECT * FROM topic";
+      foreach ($db->query($query1) as $row) {
+        echo '<input type="checkbox" name="topic[]" value="'.$row['name'] .'">' .$row['name'].' <br>';
+      }
+   
+    ?>
     
-			
-			}
-
-		?>
 	</form>
 
 
