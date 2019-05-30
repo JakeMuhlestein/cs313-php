@@ -73,7 +73,7 @@ $budgetCat = "SELECT budget_name FROM budget_item";
     echo '<strong>' . $row['amount'] . '</strong>' . '&nbsp;';
     echo '<br />';
     }
-    */
+    
 ?>
 
 </body>
