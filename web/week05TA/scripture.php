@@ -19,7 +19,7 @@
 
 		<?php
 		//$transactions = $_POST['book'];          
-			$query = "SELECT name 
+			$query = "SELECT * 
             	FROM topic"; 
             	//WHERE LOWER(book)=" ."LOWER('" . $book ."')";
 			foreach ($db->query($query) as $row) {
