@@ -60,7 +60,7 @@ $budgetCat = "SELECT budget_name FROM budget_item";
     echo '<br />';
 */
     $query = "SELECT * FROM transaction AS t
-    	JOIN pay_method AS p ON t.payment_id = p.id
+    	/*JOIN pay_method AS p ON t.payment_id = p.id*/
 		JOIN budget_item AS b ON t.budget_id = b.id WHERE b.budget_name = '$budget'"; 
 
 	foreach ($db->query($query) as $row) {
