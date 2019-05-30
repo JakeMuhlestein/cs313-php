@@ -1,3 +1,7 @@
+<?php
+	include("dbconnection.php");
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,6 +16,19 @@
 		Text: <textarea name="comment"></textarea>
 
 
+
+		<?php
+		//$transactions = $_POST['book'];          
+			$query = "SELECT * 
+            	FROM topic"; 
+            	//WHERE LOWER(book)=" ."LOWER('" . $book ."')";
+			foreach ($db->query($query) as $row) {
+   			echo "<input type='checkbox' value=\"{$row['_name']}\">{$row['budget_name']}";
+    
+			
+			}
+
+		?>
 	</form>
 
 
