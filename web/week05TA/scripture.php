@@ -13,7 +13,7 @@
 		Book:<input type="text" name="book"><br />
 		Chapter:<input type="text" name="chapter"><br />
 		Verse:<input type="text" name="verse"><br />
-		Text: <textarea name="comment"></textarea>
+		Text: <textarea name="comment"></textarea><br />
 
 
 
@@ -24,7 +24,7 @@
       }
    
     ?>
-    
+
 	</form>
 
 
