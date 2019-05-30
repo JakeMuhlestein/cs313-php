@@ -45,7 +45,7 @@ $budgetCat = "SELECT budget_name FROM budget_item";
 	
 	$budget = $_POST['budgetCategories'];
 
-	/*$query = "SELECT * FROM transaction AS t
+	$query = "SELECT * FROM transaction AS t
 		JOIN budget_item AS b
 		ON t.budget_id = b.id
 		WHERE b.budget_name = '$budget'"; 
@@ -58,9 +58,9 @@ $budgetCat = "SELECT budget_name FROM budget_item";
     echo '<strong>' . $row['payment_id'] . '</strong>' . '&nbsp;';
     echo '<strong>' . $row['amount'] . '</strong>' . '&nbsp;';
     echo '<br />';
-*/
-    $query = "SELECT * FROM transaction AS t
-    	/*JOIN pay_method AS p ON t.payment_id = p.id*/
+
+ /*   $query = "SELECT * FROM transaction AS t
+    	JOIN pay_method AS p ON t.payment_id = p.id
 		JOIN budget_item AS b ON t.budget_id = b.id WHERE b.budget_name = '$budget'"; 
 
 	foreach ($db->query($query) as $row) {
@@ -71,6 +71,7 @@ $budgetCat = "SELECT budget_name FROM budget_item";
     echo '<strong>' . $row['payment_id'] . '</strong>' . '&nbsp;';
     echo '<strong>' . $row['amount'] . '</strong>' . '&nbsp;';
     echo '<br />';
+    */
 ?>
 
 </body>
