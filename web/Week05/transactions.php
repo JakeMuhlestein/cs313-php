@@ -35,7 +35,7 @@ JOIN budget_item b ON t.budget_id = b.id WHERE b.budget_name = 'House'";
 foreach ($db->query($query) as $row) {
     $id = $row['id'];
     echo '<strong>' . $row['date'] . '</strong>' . '&nbsp;';
-    echo '<strong>' . $row['budget_name'] . '</strong>' . ':';
+    echo '<strong>' . $row['budget_name'] . '</strong>' . '&nbsp';
     echo '<strong>' . $row['vendor_name'] . '</strong>' . '&nbsp;';
     echo '<strong>' . $row['card_name'] . '</strong>' . '&nbsp;';
     echo '<strong>' . $row['amount'] . '</strong>' . '&nbsp;';
