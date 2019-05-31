@@ -64,13 +64,14 @@ $budgetCat = "SELECT budget_name FROM budget_item";
 		JOIN budget_item AS b ON t.budget_id = b.id WHERE b.budget_name = '$budget'"; 
 
 	foreach ($db->query($query) as $row) {
-    //$id = $row['id'];
-    echo '<strong>' . $row['date'] . '</strong>' . '&nbsp;';
-    echo '<strong>' . $row['budget_name'] . '</strong>' . '&nbsp';
-    echo '<strong>' . $row['vendor_name'] . '</strong>' . '&nbsp;';
-    echo '<strong>' . $row['card_name'] . '</strong>' . '&nbsp;';
-    echo '<strong>' . $row['amount'] . '</strong>' . '&nbsp;';
-    echo '<br />';
+    echo '<tr>'
+    echo '<td>' . $row['date'] . '</td>' . '&nbsp;';
+    echo '<td>' . $row['budget_name'] . '</td>' . '&nbsp';
+    echo '<td>' . $row['vendor_name'] . '</td>' . '&nbsp;';
+    echo '<td>' . $row['card_name'] . '</td>' . '&nbsp;';
+    echo '<td>' . $row['amount'] . '</td>' . '&nbsp;';
+    echo '</tr>';
+
     }
     
 ?>
