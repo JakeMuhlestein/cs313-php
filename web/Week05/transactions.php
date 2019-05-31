@@ -25,25 +25,47 @@ include("dbconnection.php");
   	</ul>
 
 <h1>Transactions</h1> <br />
+<table>
+	<tr>
+		<th>Date</th>
+		<th>Budget</th>
+		<th>Vendor</th>
+		<th>Payment</th>
+		<th>Amount</th>
+	</tr>
+
+
 <?php
-//$transactions = $_POST['book'];          
-$query = "SELECT * FROM transaction t
-JOIN pay_method p ON t.payment_id = p.id
-JOIN vendors v ON t.vend_id = v.id
-JOIN budget_item b ON t.budget_id = b.id";
-
-foreach ($db->query($query) as $row) {
-    $id = $row['id'];
-    echo '<strong>' . $row['date'] . '</strong>' . '&nbsp;';
-    echo '<strong>' . $row['budget_name'] . '</strong>' . '&nbsp';
-    echo '<strong>' . $row['vendor_name'] . '</strong>' . '&nbsp;';
-    echo '<strong>' . $row['card_name'] . '</strong>' . '&nbsp;';
-    echo '<strong>' . $row['amount'] . '</strong>' . '&nbsp;';
-    echo '<br/>';
-}
+	
+	$budget = $_POST['budgetCategories'];
 
 
 
+  	$query = "SELECT * FROM transaction AS t
+    	JOIN pay_method AS p ON t.payment_id = p.id
+    	JOIN vendors v ON t.vend_id = v.id
+		JOIN budget_item AS b ON t.budget_id = b.id WHERE"; 
+
+	foreach ($db->query($query) as $row) {
+	$budgetTotal = $budgetTotal + $row['amount'];	
+    echo '<tr>';
+    echo '<td>' . $row['date'] . '</td>';
+    echo '<td>' . $row['budget_name'] . '</td>';
+    echo '<td>' . $row['vendor_name'] . '</td>';
+    echo '<td>' . $row['card_name'] . '</td>';
+    echo '<td>' . $row['amount'] . '</td>';
+    echo '</tr>';
+
+    }
+    
 ?>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>Total:</td>
+		<td><?php echo $budgetTotal ?></td>
+	</tr>
+</table>
 </body>
 </html>
