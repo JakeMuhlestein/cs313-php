@@ -21,7 +21,8 @@ $vendor = "SELECT vendor_name FROM vendors";
 </head>
 <body >
 
-	 <ul>
+	<div>
+	<ul>
       <li><a href="index.php">Home</a></li>
       <li><a class="active" href="enterExp.php">Enter Expenses</a></li>
       <li><a href="transactions.php">Transactions</a></li>
@@ -78,7 +79,7 @@ $vendor = "SELECT vendor_name FROM vendors";
     	
 
 
-    </form>
+    </div>
 
 
 
