@@ -50,7 +50,7 @@ $budgetCat = "SELECT budget_name FROM budget_item";
 		<th>Payment</th>
 		<th>Amount</th>
 	</tr>
-</table>
+
 
 <?php
 	
@@ -75,6 +75,6 @@ $budgetCat = "SELECT budget_name FROM budget_item";
     }
     
 ?>
-
+</table>
 </body>
 </html>
