@@ -65,11 +65,11 @@ $budgetCat = "SELECT budget_name FROM budget_item";
 
 	foreach ($db->query($query) as $row) {
     echo '<tr>'
-    echo '<td>' . $row['date'] . '</td>' . '&nbsp;';
-    echo '<td>' . $row['budget_name'] . '</td>' . '&nbsp';
-    echo '<td>' . $row['vendor_name'] . '</td>' . '&nbsp;';
-    echo '<td>' . $row['card_name'] . '</td>' . '&nbsp;';
-    echo '<td>' . $row['amount'] . '</td>' . '&nbsp;';
+    echo '<td>' . $row['date'] . '</td>;';
+    echo '<td>' . $row['budget_name'] . '</td>;';
+    echo '<td>' . $row['vendor_name'] . '</td>;';
+    echo '<td>' . $row['card_name'] . '</td>;';
+    echo '<td>' . $row['amount'] . '</td>;';
     echo '</tr>';
 
     }
