@@ -27,15 +27,17 @@ include("dbconnection.php");
 <h1>Transactions</h1> <br />
 <?php
 //$transactions = $_POST['book'];          
-$query = "SELECT * 
-            FROM transaction"; 
-            //WHERE LOWER(book)=" ."LOWER('" . $book ."')";
+$query = "SELECT * FROM transaction t
+JOIN pay_method p ON t.payment_id = p.id
+JOIN vendors v ON t.vend_id = v.id
+JOIN budget_item b ON t.budget_id = b.id WHERE b.budget_name = 'House'";
+
 foreach ($db->query($query) as $row) {
     $id = $row['id'];
     echo '<strong>' . $row['date'] . '</strong>' . '&nbsp;';
-    echo '<strong>' . $row['budget_id'] . '</strong>' . ':';
-    echo '<strong>' . $row['vend_id'] . '</strong>' . '&nbsp;';
-    echo '<strong>' . $row['payment_id'] . '</strong>' . '&nbsp;';
+    echo '<strong>' . $row['budget_name'] . '</strong>' . ':';
+    echo '<strong>' . $row['vendor_name'] . '</strong>' . '&nbsp;';
+    echo '<strong>' . $row['card_name'] . '</strong>' . '&nbsp;';
     echo '<strong>' . $row['amount'] . '</strong>' . '&nbsp;';
     echo '<br/>';
 }
