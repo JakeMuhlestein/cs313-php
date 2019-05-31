@@ -1,6 +1,7 @@
 <?php
 include("dbconnection.php");
 $budgetCat = "SELECT budget_name FROM budget_item"; 
+
 ?>
 
 <!DOCTYPE html>
@@ -64,6 +65,7 @@ $budgetCat = "SELECT budget_name FROM budget_item";
 		JOIN budget_item AS b ON t.budget_id = b.id WHERE b.budget_name = '$budget'"; 
 
 	foreach ($db->query($query) as $row) {
+	$budgetTotal = $budgetTotal + $row['amount'];	
     echo '<tr>';
     echo '<td>' . $row['date'] . '</td>';
     echo '<td>' . $row['budget_name'] . '</td>';
@@ -75,6 +77,7 @@ $budgetCat = "SELECT budget_name FROM budget_item";
     }
     
 ?>
+	
 </table>
 </body>
 </html>
