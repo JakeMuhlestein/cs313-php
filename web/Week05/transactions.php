@@ -44,7 +44,7 @@ include("dbconnection.php");
   	$query = "SELECT * FROM transaction AS t
     	JOIN pay_method AS p ON t.payment_id = p.id
     	JOIN vendors v ON t.vend_id = v.id
-		JOIN budget_item AS b ON t.budget_id = b.id WHERE"; 
+		JOIN budget_item AS b ON t.budget_id = b.id"; 
 
 	foreach ($db->query($query) as $row) {
 	$budgetTotal = $budgetTotal + $row['amount'];	
