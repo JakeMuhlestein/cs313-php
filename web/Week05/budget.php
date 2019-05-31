@@ -82,7 +82,7 @@ $budgetCat = "SELECT budget_name FROM budget_item";
 		<td></td>
 		<td></td>
 		<td>Total:</td>
-		<td><?php echo $budetTotal ?></td>
+		<td><?php echo $budgetTotal ?></td>
 	</tr>
 </table>
 </body>
