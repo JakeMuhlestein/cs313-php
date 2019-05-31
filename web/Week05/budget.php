@@ -77,7 +77,13 @@ $budgetCat = "SELECT budget_name FROM budget_item";
     }
     
 ?>
-	
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>Total:</td>
+		<td><?php echo $budetTotal ?></td>
+	</tr>
 </table>
 </body>
 </html>
