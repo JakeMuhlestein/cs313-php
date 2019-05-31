@@ -64,7 +64,7 @@ $vendor = "SELECT vendor_name FROM vendors";
 		?>
 	</select><br /><br />
 	Amount:  
-	<input type="test" name="amount"><br /><br />
+	<input type="text" name="amount"><br /><br />
 
 
     <input class="btn btn-success m-2" type="submit" value="Enter Expense">
