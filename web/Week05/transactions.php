@@ -30,7 +30,7 @@ include("dbconnection.php");
 $query = "SELECT * FROM transaction t
 JOIN pay_method p ON t.payment_id = p.id
 JOIN vendors v ON t.vend_id = v.id
-JOIN budget_item b ON t.budget_id = b.id WHERE b.budget_name = 'House'";
+JOIN budget_item b ON t.budget_id = b.id";
 
 foreach ($db->query($query) as $row) {
     $id = $row['id'];
