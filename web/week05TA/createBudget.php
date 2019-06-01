@@ -52,7 +52,7 @@ include("dbconnection.php");
 
 
 
-<input type="text" name="amount">
+
 
 
 	</body>
