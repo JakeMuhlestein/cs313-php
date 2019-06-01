@@ -46,8 +46,9 @@ include("dbconnection.php");
 
     
 	?>
+  </table>
   <input type="submit" value="Add/Edit budget">
   </form>
-	</table>
+
 	</body>
 </html>
