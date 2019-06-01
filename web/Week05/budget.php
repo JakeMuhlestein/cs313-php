@@ -1,7 +1,7 @@
 <?php
 include("dbconnection.php");
 $budgetCat = "SELECT budget_name FROM budget_item"; 
-
+$db = get_db();
 ?>
 
 <!DOCTYPE html>
@@ -58,7 +58,7 @@ $budgetCat = "SELECT budget_name FROM budget_item";
 	
 	//$budget = $_POST['budgetCategories'];
 	
-	$db = get_db();
+
 
   	$query = "SELECT * FROM transaction AS t
     	JOIN pay_method AS p ON t.payment_id = p.id
