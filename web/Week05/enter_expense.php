@@ -1,6 +1,6 @@
 <?php
 
-	include("dbconnection.php");
+	require("dbconnection.php");
 
 	$budgetId = htmlspecialchars($_POST['budgetName']);
 	$query = "SELECT * FROM budget_item WHERE budget_name = '$budgetId'";
@@ -31,9 +31,9 @@
 
 	$db = get_db();
 
-	$sql = "INSERT INTO transaction(date, vend_id, payment_id, budget_id, amount) VALUES ('$date', '$vendor', '$payment', '$budget', '$amount')";
+	//$sql = "INSERT INTO transaction(date, vend_id, payment_id, budget_id, amount) VALUES ('$date', '$vendor', '$payment', '$budget', '$amount')";
 	//$stmt = $db->prepare('INSERT INTO transaction(date, vend_id, payment_id, budget_id, amount) VALUES (:date, :vendor, :payment, :budget, :amount);');
-	pg_query($db, $sql);
+	//pg_query($db, $sql);
 
 	//$stmt = $this->pdo->prepare($sql);
 
