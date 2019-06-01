@@ -3,8 +3,8 @@
 	include("dbconnection.php");
 	$db = get_db();
 	$budgetId = htmlspecialchars($_POST['budgetName']);
-	$res = pg_query(,"SELECT id FROM budget_item b WHERE b.budget_name = $budgetId" );
-	$budget = pg_fetch_result($res, 1, 0);
+	$res = "SELECT id FROM budget_item b WHERE b.budget_name = $budgetId";
+	$budget = pg_fetch_array($res);
 
 	$date = htmlspecialchars($_POST['date']);
 	$amount = htmlspecialchars($_POST['amount']);
