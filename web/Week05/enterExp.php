@@ -32,7 +32,7 @@ $vendor = "SELECT vendor_name FROM vendors";
   	</ul>
 
 	<h1>Enter Expenses</h1> <br />
-    <form class="m-3 form-group mx-auto" action="" method="post">
+    <form class="m-3 form-group mx-auto" action="enter_expense.php" method="post">
     Budget:  
     <select name="budgetCategories">
     	<option>Select Budget</option>
