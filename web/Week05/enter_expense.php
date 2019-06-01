@@ -1,6 +1,6 @@
 <?php
 
-	include("dbconnection.php");
+	require("dbconnection.php");
 
 	$budgetId = htmlspecialchars($_POST['budgetName']);
 	$query = "SELECT * FROM budget_item WHERE budget_name = '$budgetId'";
@@ -32,7 +32,6 @@
 	echo $vendor;
 	echo $amount;
 
-	echo $budget + $amount;
 
 	$db = get_db();
 
