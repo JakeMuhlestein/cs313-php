@@ -33,7 +33,7 @@
 
 	$sql = "INSERT INTO transaction(date, vend_id, payment_id, budget_id, amount) VALUES ('$date', '$vendor', '$payment', '$budget', '$amount')";
 	//$stmt = $db->prepare('INSERT INTO transaction(date, vend_id, payment_id, budget_id, amount) VALUES (:date, :vendor, :payment, :budget, :amount);');
-	pg_query($sql);
+	pg_query($db, $sql);
 
 	//$stmt = $this->pdo->prepare($sql);
 
