@@ -41,7 +41,7 @@
 	$stmt->bindValue(':amount', $amount, PDO::PARAM_INT);
 	$stmt->execute();
 	//$result = pg_query($db, $query);
-echo "made it";
+	echo $budget;
 	$new_page = "transactions.php";
 
 	header("Location: $new_page");
