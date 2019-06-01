@@ -31,8 +31,8 @@
 
 	//require("dbconnection.php");
 	//$db = get_db();
-
-	//$sql = "INSERT INTO 'transaction' (id, date, vend_id, payment_id, budget_id, amount) VALUES (DEFAULT, '$date', '$vendor', '$payment', '$budget', '$amount')";
+/*
+	$query = 'INSERT INTO transaction (id, date, vend_id, payment_id, budget_id, amount) VALUES (DEFAULT, '$date', '$vendor', '$payment', '$budget', '$amount')';
 	$stmt = $db->prepare('INSERT INTO transaction(date, vend_id, payment_id, budget_id, amount) VALUES (:date, :vendor, :payment, :budget, :amount);');
 	//pg_query($db, $sql);
 
@@ -45,7 +45,7 @@
 	$stmt->bindValue(':amount', 17.50, PDO::PARAM_INT);
 	$stmt->execute();
 	$result = pg_query($db, $query);
-
+*/
 	$new_page = "transactions.php";
 
 	header("Location: $new_page");
