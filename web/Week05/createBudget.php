@@ -25,6 +25,7 @@ include("dbconnection.php");
     	<li><a class="active" href="createBudget.php">Create Budget</a></li>
   	</ul>
 
+<form action"" method="post">
   	<table>
 	<tr>
 		<th>Budget</th>
@@ -45,6 +46,8 @@ include("dbconnection.php");
 
     
 	?>
+  <input type="submit" value="Add/Edit budget">
+  </form>
 	</table>
 	</body>
 </html>
