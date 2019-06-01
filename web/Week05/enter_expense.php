@@ -1,6 +1,6 @@
 <?php
 
-	require("dbconnection.php");
+	include("dbconnection.php");
 
 	$budgetId = htmlspecialchars($_POST['budgetName']);
 	$query = "SELECT * FROM budget_item WHERE budget_name = '$budgetId'";
@@ -23,7 +23,6 @@
 	$date = htmlspecialchars($_POST['date']);
 	$amount = htmlspecialchars($_POST['amount']);
 
-	//echo $date;
 	//echo $budget;
 	//echo $payment;
 	//echo $vendor;
