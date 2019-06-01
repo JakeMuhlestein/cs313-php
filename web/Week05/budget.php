@@ -23,6 +23,7 @@ $budgetCat = "SELECT budget_name FROM budget_item";
       <li><a href="transactions.php">Transactions</a></li>
       <li><a class="active" href="budget.php">Budgets</a></li>
       <li><a href="update.php">Update</a></li>
+      <li><a href="createBudget.php">Create Budget</a></li>
   	</ul>
 
 <h1>Budget</h1>

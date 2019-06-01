@@ -21,6 +21,7 @@ include("dbconnection.php");
       <li><a href="transactions.php">Transactions</a></li>
       <li><a href="budget.php">Budgets</a></li>
       <li><a href="update.php">Update</a></li>
+      <li><a href="createBudget.php">Create Budget</a></li>
 
   </ul>
 

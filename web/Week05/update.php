@@ -22,7 +22,7 @@ include("dbconnection.php");
       <li><a href="transactions.php">Transactions</a></li>
       <li><a href="budget.php">Budgets</a></li>
       <li><a class="active" href="update.php">Update</a></li>
-
+	  <li><a href="createBudget.php">Create Budget</a></li>
   	</ul>
 	<h1>Update</h1>
 	<form action="" method="post">
