@@ -30,12 +30,12 @@
 	//echo $amount;
 
 
-	//$db = get_db();
+	$db = get_db();
 
-	$sql = 'INSERT INTO transaction(date, vend_id, payment_id, budget_id, amount) VALUES (:date, :vendor, :payment, :budget, :amount)';
-	//$stmt = $db->prepare('INSERT INTO transaction(date, vend_id, payment_id, budget_id, amount) VALUES (:date, :vendor, :payment, :budget, :amount);');
+	//$sql = 'INSERT INTO transaction(date, vend_id, payment_id, budget_id, amount) VALUES (:date, :vendor, :payment, :budget, :amount)';
+	$stmt = $db->pdo->prepare('INSERT INTO transaction(date, vend_id, payment_id, budget_id, amount) VALUES (:date, :vendor, :payment, :budget, :amount);');
 
-	$stmt = $this->pdo->prepare($sql);
+	//$stmt = $this->pdo->prepare($sql);
 
 	$stmt->bindValue(':date', $date, PDO::PARAM_STR);
 	$stmt->bindValue(':vendor', $vendor, PDO::PARAM_INT);
