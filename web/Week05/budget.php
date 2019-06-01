@@ -66,7 +66,8 @@ $budgetCat = "SELECT budget_name FROM budget_item";
 		JOIN budget_item AS b ON t.budget_id = b.id WHERE b.budget_name = '$budget'"; 
 
 	foreach ($db->query($query) as $row) {
-	$budgetTotal = $budgetTotal + $row['amount'];	
+	$expenseTotal = $expenseTotal + $row['amount'];
+	$budgetAmount = $row['budget_amount'];		
     echo '<tr>';
     echo '<td>' . $row['date'] . '</td>';
     echo '<td>' . $row['budget_name'] . '</td>';
@@ -90,14 +91,14 @@ $budgetCat = "SELECT budget_name FROM budget_item";
 		<td></td>
 		<td></td>
 		<td>Budget Total:</td>
-		<td><?php echo $budget_amount ?></td>
+		<td><?php echo $budgetAmount ?></td>
 	</tr>
 		<tr>
 		<td></td>
 		<td></td>
 		<td></td>
 		<td>Over/Under:</td>
-		<td><?php echo $budget_amount - $budgetTotal ?></td>
+		<td><?php echo $budgetAmount - $budgetTotal ?></td>
 	</tr>
 
 </table>
