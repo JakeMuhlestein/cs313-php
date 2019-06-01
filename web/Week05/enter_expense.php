@@ -29,7 +29,7 @@
 	//echo $amount;
 
 
-	//$db = get_db();
+	$db = get_db();
 
 	$sql = "INSERT INTO transaction(date, vend_id, payment_id, budget_id, amount) VALUES ('$date', '$vendor', '$payment', '$budget', '$amount')";
 	//$stmt = $db->prepare('INSERT INTO transaction(date, vend_id, payment_id, budget_id, amount) VALUES (:date, :vendor, :payment, :budget, :amount);');
