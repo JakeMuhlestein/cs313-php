@@ -23,16 +23,17 @@
 	$date = htmlspecialchars($_POST['date']);
 	$amount = htmlspecialchars($_POST['amount']);
 
-	echo $date;
-	echo $budget;
-	echo $payment;
-	echo $vendor;
-	echo $amount;
+	//echo $date;
+	//echo $budget;
+	//echo $payment;
+	//echo $vendor;
+	//echo $amount;
 
 
 	$db = get_db();
 
 	$stmt = $db->prepare('INSERT INTO transaction(date, vend_id, payment_id, budget_id, amount) VALUES (:date, :vendor, :payment, :budget, :amount);');
+
 	$stmt->bindValue(':date', $date, PDO::PARAM_STR);
 	$stmt->bindValue(':vendor', $vendor, PDO::PARAM_INT);
 	$stmt->bindValue(':payment', $payment, PDO::PARAM_INT);
@@ -40,7 +41,7 @@
 	$stmt->bindValue(':amount', $amount, PDO::PARAM_INT);
 	$stmt->execute();
 	//$result = pg_query($db, $query);
-
+echo "made it";
 	$new_page = "transactions.php";
 
 	header("Location: $new_page");
