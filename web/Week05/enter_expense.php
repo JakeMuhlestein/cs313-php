@@ -14,14 +14,11 @@
     	$payment = $row['id'];
     }
 
-
-
 	$vendor = htmlspecialchars($_POST['vendor']);
 	$query = "SELECT * FROM vendors WHERE vendor_name = '$vendor'";
 	foreach ($db->query($query) as $row) {
     	$vendor = $row['id'];
     }
-
 
 	$date = htmlspecialchars($_POST['date']);
 	$amount = htmlspecialchars($_POST['amount']);
@@ -35,7 +32,12 @@
 
 	$db = get_db();
 
-	$stmt = $db->prepare("INSERT INTO transaction(date, vend_id, payment_id, budget_id, amount) VALUES ('2019-06-01', 2, 2, 3, 16.25)");
+	$stmt = $db->prepare('INSERT INTO transaction(date, vend_id, payment_id, budget_id, amount) VALUES (:date, :vendor, :payment, :budget, :amount);');
+	$stmt->bindValue(':date', $date, PDO::PARAM_STR);
+	$stmt->bindValue(':vendor', $vendor, PDO::PARAM_INT);
+	$stmt->bindValue(':payment', $payment, PDO::PARAM_STR);
+	$stmt->bindValue(':budget', $budget, PDO::PARAM_STR);
+	$stmt->bindValue(':amount', $amount, PDO::PARAM_STR);
 	$stmt->execute();
 	//$result = pg_query($db, $query);
 
