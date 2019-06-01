@@ -4,14 +4,16 @@
 	//$db = get_db();
 	$budgetId = htmlspecialchars($_POST['budgetName']);
 
-	$query = "SELECT (id) FROM budget_item WHERE budget_name = $budgetId";
+	$query = "SELECT * FROM budget_item"; //WHERE budget_name = $budgetId";
 
 	foreach ($db->query($query) as $row) {
  
-    echo $row['id'];
+ 	if($row['id'] = $row[$budget_name])
+ 	{
+    	echo $row['id'];
     //echo $row['budget_name'];
     //echo $row['budget_amount'];
-
+	}
 
     }
 	
