@@ -29,9 +29,9 @@
 	//echo $vendor;
 	//echo $amount;
 
-
-	$db = get_db();
 		echo $budget;
+	$db = get_db();
+
 	$stmt = $db->prepare('INSERT INTO transaction(date, vend_id, payment_id, budget_id, amount) VALUES (:date, :vendor, :payment, :budget, :amount);');
 
 
