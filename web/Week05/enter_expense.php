@@ -11,7 +11,7 @@
  	//if($row['budget_name'] == $row['$budgetId'])
  	//{
     	echo $row['id'];
-    	echo $row['budget_name'];
+    //	echo $row['budget_name'];
     //echo $row['budget_name'];
     //echo $row['budget_amount'];
 	//}
