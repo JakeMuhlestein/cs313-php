@@ -5,7 +5,7 @@
 	$date = htmlspecialchars($_POST['date']);
 	$amount = htmlspecialchars($_POST['amount']);
 
-	$budgetId = htmlspecialchars($_POST['budgetName'])
+	$budgetId = htmlspecialchars($_POST['budgetName']);
 	$budget = "SELECT id FROM budget_item b WHERE b.budget_name = 'House'";
 	//htmlspecialchars($_POST['budgetName']);
 	$payment = htmlspecialchars($_POST['payType']);
