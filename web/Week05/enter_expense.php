@@ -22,7 +22,7 @@
 	//echo $date;
 	echo $budget;
 	//echo $payment;
-	//echo $vendor;
+	echo $vendor;
 	//echo $amount;
 
 	$db = get_db();
