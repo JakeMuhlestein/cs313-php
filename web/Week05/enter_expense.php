@@ -4,8 +4,7 @@
 	//$db = get_db();
 	$budgetId = htmlspecialchars($_POST['budgetName']);
 
-	$query = "SELECT (id) FROM budget_item AS b"; 
-	//WHERE b.budget_name = $budgetId";
+	$query = "SELECT (id) FROM budget_item WHERE budget_name = $budgetId";
 
 	foreach ($db->query($query) as $row) {
  
