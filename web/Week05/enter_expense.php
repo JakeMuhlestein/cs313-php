@@ -28,11 +28,11 @@
 	$vendor = htmlspecialchars($_POST['vendor']);
 	$amount = htmlspecialchars($_POST['amount']);
 
-	echo $date;
+	//echo $date;
 	echo $budget;
 	echo $payment;
 	echo $vendor;
-	echo $amount;
+	//echo $amount;
 
 	//require("dbconnection.php");
 	//$db = get_db();
