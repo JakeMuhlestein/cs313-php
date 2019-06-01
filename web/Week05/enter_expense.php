@@ -28,7 +28,7 @@
 	//echo $vendor;
 	//echo $amount;
 
-
+	require("dbconnection.php");
 	$db = get_db();
 
 	//$sql = "INSERT INTO transaction(date, vend_id, payment_id, budget_id, amount) VALUES ('$date', '$vendor', '$payment', '$budget', '$amount')";
