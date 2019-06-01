@@ -34,7 +34,7 @@
 
 	$db = get_db();
 
-	$stmt = $db->prepare('INSERT INTO transaction(date, vend_id, payment_id, budget_id, amount) VALUES ($date, $vendor, $payment, $budget, $amount)');
+	$stmt = $db->prepare("INSERT INTO transaction(date, vend_id, payment_id, budget_id, amount) VALUES ('$date', '$vendor', '$payment', '$budget', '$amount')");
 	$stmt->execute();
 	//$result = pg_query($db, $query);
 
