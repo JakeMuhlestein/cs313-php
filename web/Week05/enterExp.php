@@ -33,6 +33,9 @@ $vendor = "SELECT vendor_name FROM vendors";
 
 	<h1>Enter Expenses</h1> <br />
     <form class="m-3 form-group mx-auto" action="enter_expense.php" method="post">
+    Date:  
+    <input name="date" type="text">
+    <br /><br />
     Budget:  
     <select name="budgetName">
     	<option>Select Budget</option>
