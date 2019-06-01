@@ -4,7 +4,7 @@
 	$db = get_db();
 	$budgetId = htmlspecialchars($_POST['budgetName']);
 	$budget = $db->prepare("SELECT id FROM budget_item b WHERE b.budget_name = $budgetId");
-	$budget->execute();
+	//$budget->execute();
 
 	//$res = pg_query($db, "SELECT id FROM budget_item b WHERE b.budget_name = $budgetId");
 	//$budget = pg_fetch_array($res);
