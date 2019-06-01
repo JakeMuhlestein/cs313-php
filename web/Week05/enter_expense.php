@@ -1,7 +1,7 @@
 <?php
 
 	include("dbconnection.php");
-	$db=getdb();
+	$db=get_db();
 
 	$budgetId = htmlspecialchars($_POST['budgetName']);
 	$query = "SELECT * FROM budget_item WHERE budget_name = '$budgetId'";
