@@ -19,11 +19,11 @@
 	$payment = htmlspecialchars($_POST['payType']);
 	$vendor = htmlspecialchars($_POST['vendor']);
 
-	echo $date;
+	//echo $date;
 	echo $budget;
-	echo $payment;
-	echo $vendor;
-	echo $amount;
+	//echo $payment;
+	//echo $vendor;
+	//echo $amount;
 
 	$db = get_db();
 
