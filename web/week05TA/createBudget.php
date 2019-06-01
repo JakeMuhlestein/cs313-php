@@ -34,27 +34,17 @@ include("dbconnection.php");
 
 	<?php
 	
-	$budget = $_POST['budgetCategories'];
+  		$query = "SELECT * FROM budget_item"; 
 
-
-
-  	$query = "SELECT * FROM budget_item"; 
-
-	foreach ($db->query($query) as $row) {
-    echo '<tr>';
-    echo '<td>' . $row['budget_name'] . '</td>';
-    echo '<input type="text" name="amount">';
-    echo '</tr>';
-
-    }
+		foreach ($db->query($query) as $row) {
+    	echo '<tr>';
+    	echo '<td>' . $row['budget_name'] . '</td>';
+    	echo '<input type="text" name="amount">';
+    	echo '</tr>';
+    	}
 
     
 	?>
 	</table>
-
-
-
-
-
 	</body>
 </html>
