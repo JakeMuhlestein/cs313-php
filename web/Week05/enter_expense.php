@@ -7,15 +7,20 @@
 	$vendor = htmlspecialchars($_POST['vendorName']);
 	$amount = htmlspecialchars($_POST['amount']);
 
+	echo $budget;
+	echo $payment;
+	echo $vendor;
+	echo $amount;
+
 	$db = get_db();
 
-	$stmt = $db->prepare('INSERT INTO transaction(vend_id, payment_id, budget_id, amount)
-						VALUES ($vendor, $payment, $budget, $amount)');
+	$stmt = $db->prepare('INSERT INTO transaction(vend_id, payment_id, budget_id, amount)VALUES ($vendor, $payment, $budget, $amount)');
+	$stmt->execute();
 
-	$new_page = "transactions.php";
+	//$new_page = "transactions.php";
 
-	header("Location: $new_page");
-	die();
+	//header("Location: $new_page");
+	//die();
 
 
 
