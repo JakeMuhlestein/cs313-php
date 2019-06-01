@@ -6,7 +6,7 @@
 
 	$res = pg_query($db, "SELECT id FROM budget_item b WHERE b.budget_name = $budgetId");
 	//$db->query($res);
-	$budget = pg_fetch_result($res,1,0);
+	$budget = pg_fetch_result($res,1,1);
 	//$budget->execute();
 
 	//$res = pg_query($db, "SELECT id FROM budget_item b WHERE b.budget_name = $budgetId");
