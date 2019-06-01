@@ -23,8 +23,8 @@
     }
 */
 	$date = htmlspecialchars($_POST['date']);
-	$budget = htmlspecialchars($_POST['budget_name']);
-	$payment = htmlspecialchars($_POST['card_name']);
+	$budget = htmlspecialchars($_POST['budgetName']);
+	$payment = htmlspecialchars($_POST['payType']);
 	$vendor = htmlspecialchars($_POST['vendor']);
 	$amount = htmlspecialchars($_POST['amount']);
 
