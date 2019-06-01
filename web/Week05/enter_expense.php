@@ -1,9 +1,9 @@
 <?php
 
 	include("dbconnection.php");
-	$db = get_db();
+	//$db = get_db();
 	$budgetId = htmlspecialchars($_POST['budgetName']);
-	$budget = "SELECT id FROM budget_item b WHERE b.budget_name = $budgetId";
+	//$budget = "SELECT id FROM budget_item b WHERE b.budget_name = $budgetId";
 	//$budget->execute();
 
 	//$res = pg_query($db, "SELECT id FROM budget_item b WHERE b.budget_name = $budgetId");
@@ -13,7 +13,7 @@
 	$amount = htmlspecialchars($_POST['amount']);
 
 	
-	//$budget = "SELECT id FROM budget_item b WHERE b.budget_name = $budgetId";
+	$budget = "SELECT id FROM budget_item b WHERE b.budget_name = $budgetId";
 	//htmlspecialchars($_POST['budgetName']);
 	$payment = htmlspecialchars($_POST['payType']);
 	$vendor = htmlspecialchars($_POST['vendor']);
@@ -24,7 +24,7 @@
 	echo $vendor;
 	echo $amount;
 
-	//$db = get_db();
+	$db = get_db();
 
 	$stmt = $db->prepare('INSERT INTO transaction(date, vend_id, payment_id, budget_id, amount) VALUES ($date, $vendor, $payment, $budget, $amount)');
 	$stmt->execute();
