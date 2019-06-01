@@ -39,7 +39,7 @@ include("dbconnection.php");
 		foreach ($db->query($query) as $row) {
     	echo '<tr>';
     	echo '<td>' . $row['budget_name'] . '</td>';
-    	echo '<input type="text" name="amount">';
+    	echo '<td><input type="text" name="amount"></td>';
     	echo '</tr>';
     	}
 
