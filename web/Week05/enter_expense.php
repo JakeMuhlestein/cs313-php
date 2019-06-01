@@ -32,10 +32,11 @@
 	echo $vendor;
 	echo $amount;
 
-	$db = get_db();
+	//$db = get_db();
 
-	$stmt = $db->prepare('INSERT INTO transaction(date, vend_id, payment_id, budget_id, amount) VALUES ($date, $vendor, $payment, $budget, $amount)');
-	$stmt->execute();
+	$query ('INSERT INTO transaction(date, vend_id, payment_id, budget_id, amount) VALUES ($date, $vendor, $payment, $budget, $amount)');
+	//$stmt->execute();
+	$result = pg_query($db, $query);
 
 	//$new_page = "transactions.php";
 
