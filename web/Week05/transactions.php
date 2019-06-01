@@ -36,7 +36,7 @@ include("dbconnection.php");
 
 
 <?php
-	
+	$db=get_db();
 	$budget = $_POST['budgetCategories'];
 
 
