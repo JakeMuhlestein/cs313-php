@@ -84,7 +84,7 @@ $budgetCat = "SELECT budget_name FROM budget_item";
 		<td></td>
 		<td></td>
 		<td>Expense Total:</td>
-		<td><?php echo $budgetTotal ?></td>
+		<td><?php echo $expenseTotal ?></td>
 	</tr>
 		<tr>
 		<td></td>
@@ -98,7 +98,7 @@ $budgetCat = "SELECT budget_name FROM budget_item";
 		<td></td>
 		<td></td>
 		<td>Over/Under:</td>
-		<td><?php echo $budgetAmount - $budgetTotal ?></td>
+		<td><?php echo $budgetAmount - $expenseTotal ?></td>
 	</tr>
 
 </table>
