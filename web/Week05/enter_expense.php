@@ -2,11 +2,13 @@
 
 	include("dbconnection.php");
 
+	$date = htmlspecialchars($_POST['date']);
 	$budget = htmlspecialchars($_POST['budgetName']);
 	$payment = htmlspecialchars($_POST['payType']);
 	$vendor = htmlspecialchars($_POST['vendor']);
 	$amount = htmlspecialchars($_POST['amount']);
 
+	echo $date;
 	echo $budget;
 	echo $payment;
 	echo $vendor;
@@ -14,7 +16,7 @@
 
 	$db = get_db();
 
-	$stmt = $db->prepare('INSERT INTO transaction(vend_id, payment_id, budget_id, amount)VALUES ($vendor, $payment, $budget, $amount)');
+	$stmt = $db->prepare('INSERT INTO transaction(date, vend_id, payment_id, budget_id, amount)VALUES ($date, $vendor, $payment, $budget, $amount)');
 	$stmt->execute();
 
 	//$new_page = "transactions.php";
