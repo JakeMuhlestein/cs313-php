@@ -27,7 +27,7 @@
 	//echo $budget;
 	//echo $payment;
 	//echo $vendor;
-	//echo $amount;
+	echo $amount;
 
 	//require("dbconnection.php");
 	//$db = get_db();
