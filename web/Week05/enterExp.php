@@ -1,5 +1,6 @@
 <?php
 include("dbconnection.php");
+$db=getdb();
 
 $budgetCat = "SELECT budget_name FROM budget_item"; 
 $payment = "SELECT card_name FROM pay_method";
