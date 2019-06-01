@@ -18,11 +18,11 @@ include("dbconnection.php");
 
 	<ul>
     	<li><a href="index.php">Home</a></li>
-    	<li><a class="active" href="enterExp.php">Enter Expenses</a></li>
+    	<li><a href="enterExp.php">Enter Expenses</a></li>
     	<li><a href="transactions.php">Transactions</a></li>
     	<li><a href="budget.php">Budgets</a></li>
     	<li><a href="update.php">Update</a></li>
-    	<li><a href="createBudget.php">Create Budget</a></li>
+    	<li><a class="active" href="createBudget.php">Create Budget</a></li>
   	</ul>
 
   	<table>
@@ -47,9 +47,10 @@ include("dbconnection.php");
     echo '</tr>';
 
     }
-    
-?>
 
+    
+	?>
+	</table>
 
 
 
