@@ -33,15 +33,15 @@
 	$db = get_db();
 
 	//$sql = 'INSERT INTO transaction(date, vend_id, payment_id, budget_id, amount) VALUES (:date, :vendor, :payment, :budget, :amount)';
-	$stmt = $db->pdo->prepare('INSERT INTO transaction(date, vend_id, payment_id, budget_id, amount) VALUES (:date, :vendor, :payment, :budget, :amount);');
+	$stmt = $db->prepare('INSERT INTO transaction(date, vend_id, payment_id, budget_id, amount) VALUES (:date, :vendor, :payment, :budget, :amount);');
 
 	//$stmt = $this->pdo->prepare($sql);
 
-	$stmt->bindValue(':date', $date, PDO::PARAM_STR);
-	$stmt->bindValue(':vendor', $vendor, PDO::PARAM_INT);
-	$stmt->bindValue(':payment', $payment, PDO::PARAM_INT);
-	$stmt->bindValue(':budget', $budget, PDO::PARAM_INT);
-	$stmt->bindValue(':amount', $amount, PDO::PARAM_INT);
+	$stmt->bindValue(':date', '2019-06-01', PDO::PARAM_STR);
+	$stmt->bindValue(':vendor', 1, PDO::PARAM_INT);
+	$stmt->bindValue(':payment', 2, PDO::PARAM_INT);
+	$stmt->bindValue(':budget', 2, PDO::PARAM_INT);
+	$stmt->bindValue(':amount', 17.50, PDO::PARAM_INT);
 	$stmt->execute();
 	//$result = pg_query($db, $query);
 
