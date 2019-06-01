@@ -1,5 +1,6 @@
 <?php
 include("dbconnection.php");
+$db=get_db();
 ?>
 
 <!DOCTYPE html>
