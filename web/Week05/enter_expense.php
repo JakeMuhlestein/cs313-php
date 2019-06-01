@@ -4,7 +4,7 @@
 
 	$budget = htmlspecialchars($_POST['budgetName']);
 	$payment = htmlspecialchars($_POST['payType']);
-	$vendor = htmlspecialchars($_POST['vendorName']);
+	$vendor = htmlspecialchars($_POST['vendor']);
 	$amount = htmlspecialchars($_POST['amount']);
 
 	echo $budget;
