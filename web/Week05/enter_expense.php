@@ -4,9 +4,9 @@
 	//$db = get_db();
 	$budgetId = htmlspecialchars($_POST['budgetName']);
 
-	$res = "SELECT id FROM budget_item b WHERE b.budget_name = $budgetId";
-	$db->query($res);
-	$budget = pg_fetch_result($res,1,0);
+	$res = pg_query($db, "SELECT id FROM budget_item b WHERE b.budget_name = $budgetId");
+	//$db->query($res);
+	$budget = pg_fetch_result($res,0,0);
 	//$budget->execute();
 
 	//$res = pg_query($db, "SELECT id FROM budget_item b WHERE b.budget_name = $budgetId");
