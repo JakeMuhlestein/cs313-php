@@ -8,7 +8,7 @@
 
 	foreach ($db->query($query) as $row) {
  
- 	if($row['id'] = $row['$budgetId'])
+ 	if($row['id'] == $row['$budgetId'])
  	{
     	echo $row['id'];
     //echo $row['budget_name'];
