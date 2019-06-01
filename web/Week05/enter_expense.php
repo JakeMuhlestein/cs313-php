@@ -3,7 +3,7 @@
 	include("dbconnection.php");
 
 	$budget = htmlspecialchars($_POST['budgetName']);
-	$payment = htmlspecialchars($_POST['cardName']);
+	$payment = htmlspecialchars($_POST['payType']);
 	$vendor = htmlspecialchars($_POST['vendorName']);
 	$amount = htmlspecialchars($_POST['amount']);
 
