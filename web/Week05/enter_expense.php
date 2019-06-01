@@ -35,9 +35,9 @@
 	$stmt = $db->prepare('INSERT INTO transaction(date, vend_id, payment_id, budget_id, amount) VALUES (:date, :vendor, :payment, :budget, :amount);');
 	$stmt->bindValue(':date', $date, PDO::PARAM_STR);
 	$stmt->bindValue(':vendor', $vendor, PDO::PARAM_INT);
-	$stmt->bindValue(':payment', $payment, PDO::PARAM_STR);
-	$stmt->bindValue(':budget', $budget, PDO::PARAM_STR);
-	$stmt->bindValue(':amount', $amount, PDO::PARAM_STR);
+	$stmt->bindValue(':payment', $payment, PDO::PARAM_INT);
+	$stmt->bindValue(':budget', $budget, PDO::PARAM_INT);
+	$stmt->bindValue(':amount', $amount, PDO::PARAM_INT);
 	$stmt->execute();
 	//$result = pg_query($db, $query);
 
