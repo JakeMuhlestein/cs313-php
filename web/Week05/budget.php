@@ -56,7 +56,7 @@ $db = get_db();
 
 <?php
 	
-	//$budget = $_POST['budgetCategories'];
+	$budget = $_POST['budgetCategories'];
 	
 
 
