@@ -6,6 +6,7 @@
 	$budget = 0;
 	$payment = 0;
 	$vendor = 0;
+	$amount = $_POST['amount'];
 
 
 	$budgetId = htmlspecialchars($_POST['budgetName']);
