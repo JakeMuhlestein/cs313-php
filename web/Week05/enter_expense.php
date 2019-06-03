@@ -61,7 +61,7 @@
 	$stmt->bindValue(':vendor', $vendor);
 	$stmt->bindValue(':payment', $payment);
 	$stmt->bindValue(':budget', $budget);
-	$stmt->bindValue(':amount', $amount);
+	$stmt->bindValue(':amount', $amount, PDO::PARAM_INT);
 	$stmt->execute();
 	//$result = pg_query($db, $query);
 
