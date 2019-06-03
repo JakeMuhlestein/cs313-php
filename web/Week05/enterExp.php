@@ -52,7 +52,7 @@ $vendor = "SELECT vendor_name FROM vendors";
     	<option>Select Payment</option>
 		<?php
     		foreach ($db->query($payment) as $row) {
-   			echo "<option value=\"{$row['id']}\">{$row['card_name']}</option>";
+   			echo "<option value=\"{$row['card_name']}\">{$row['card_name']}</option>";
     
 			}
 		?>
@@ -62,7 +62,7 @@ $vendor = "SELECT vendor_name FROM vendors";
     	<option>Select Vendor</option>
 		<?php
     		foreach ($db->query($vendor) as $row) {
-   			echo "<option value=\"{$row['id']}\">{$row['vendor_name']}</option>";
+   			echo "<option value=\"{$row['vendor_name']}\">{$row['vendor_name']}</option>";
     
 			}
 		?>

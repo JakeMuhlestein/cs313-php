@@ -23,13 +23,13 @@
     	$vendor = $row['id'];
     }
 */
-	//$date = htmlspecialchars($_POST['date']);
+	$date = htmlspecialchars($_POST['date']);
 	//$budget = htmlspecialchars($_POST['budgetName']);
 	//$payment = htmlspecialchars($_POST['payType']);
 	//$vendor = htmlspecialchars($_POST['vendor']);
 	//$amount = htmlspecialchars($_POST['amount']);
 
-	//echo $date;
+	echo $date;
 	echo $budget;
 	//echo $payment;
 	//echo $vendor;
