@@ -49,11 +49,11 @@
 	//$stmt = $this->pdo->prepare($sql);
 
 	//$stmt->bindValue(':date', $date, PDO::PARAM_STR);
-	$stmt->bindValue(':vendor', $vendor, PDO::PARAM_INT);
-	$stmt->bindValue(':payment', $payment, PDO::PARAM_INT);
-	$stmt->bindValue(':budget', $budget, PDO::PARAM_INT);
-	$stmt->bindValue(':amount', $amount, PDO::PARAM_INT);
-	$stmt->execute();
+	//$stmt->bindValue(':vendor', $vendor, PDO::PARAM_INT);
+	//$stmt->bindValue(':payment', $payment, PDO::PARAM_INT);
+	//$stmt->bindValue(':budget', $budget, PDO::PARAM_INT);
+	//$stmt->bindValue(':amount', $amount, PDO::PARAM_INT);
+	//$stmt->execute();
 	//$result = pg_query($db, $query);
 
 	$new_page = "transactions.php";
