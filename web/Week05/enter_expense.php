@@ -1,17 +1,17 @@
 <?php
 
 	include("dbconnection.php");
-	//$db=get_db();
+	$db=get_db();
 
 
 	$budgetId = htmlspecialchars($_POST['budgetName']);
 	//echo $budgetId;
-	/*
+	
 	$query = "SELECT * FROM budget_item WHERE budget_name = '$budgetId'";
 	foreach ($db->query($query) as $row) {
     	$budget = $row['id'];
     }
-
+/*
 	$payment = htmlspecialchars($_POST['payType']);
 	$query = "SELECT * FROM pay_method WHERE card_name = '$payment'";
 	foreach ($db->query($query) as $row) {
@@ -31,7 +31,7 @@
 	//$amount = htmlspecialchars($_POST['amount']);
 
 	//echo $date;
-	echo $budgetId;
+	echo $budget;
 	//echo $payment;
 	//echo $vendor;
 	//echo $amount;
