@@ -1,7 +1,7 @@
 <?php
 
 	include("dbconnection.php");
-	$db=get_db();
+	//$db=get_db();
 
 
 	$budgetId = htmlspecialchars($_POST['budgetName']);
