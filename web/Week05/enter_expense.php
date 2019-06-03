@@ -3,6 +3,10 @@
 	include("dbconnection.php");
 	$db=get_db();
 
+	$budget = 0;
+	$payment = 0;
+	$vendor = 0;
+
 
 	$budgetId = htmlspecialchars($_POST['budgetName']);
 	$query = "SELECT * FROM budget_item WHERE budget_name = '$budgetId'";
@@ -29,9 +33,9 @@
 	$amount = htmlspecialchars($_POST['amount']);
 */
 	//$date = $_POST['date'];
-	$budget = 2;
-	$payment = 2;
-	$vendor = 2;
+	//$budget = 2;
+	//$payment = 2;
+	//$vendor = 2;
 	//$amount = $_POST['amount'];
 
 
