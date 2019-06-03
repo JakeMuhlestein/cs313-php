@@ -39,7 +39,7 @@
 	//require("dbconnection.php");
 	//$db = get_db();
 
-	$query = "INSERT INTO transaction (vend_id, payment_id, budget_id, amount) VALUES ( '$vendor', '$payment', '$budget', '$amount');";
+	$query = "INSERT INTO transaction (vend_id, payment_id, budget_id, amount) VALUES ( '$vendor', '$payment', '$budget', '$amount')";
 
 	//$stmt = $db->prepare('INSERT INTO transaction(vend_id, payment_id, budget_id, amount) VALUES (:vendor, :payment, :budget, :amount);');
 echo $amount * 2;
