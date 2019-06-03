@@ -3,7 +3,7 @@
 	include("dbconnection.php");
 	$db=get_db();
 
-
+/*
 	$budgetId = htmlspecialchars($_POST['budgetName']);
 	//echo $budgetId;
 	
@@ -29,8 +29,17 @@
 	//$payment = htmlspecialchars($_POST['payType']);
 	//$vendor = htmlspecialchars($_POST['vendor']);
 	$amount = htmlspecialchars($_POST['amount']);
+*/
 
-	echo $date;
+	$budget = 1;
+	$payment = 1;
+	$vendor = 1;
+	$amount = 12;
+
+
+
+
+	//echo $date;
 	echo $budget;
 	echo $payment;
 	echo $vendor;
