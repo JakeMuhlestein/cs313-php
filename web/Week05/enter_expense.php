@@ -5,7 +5,7 @@
 
 
 	$budgetId = htmlspecialchars($_POST['budgetName']);
-	$query = "SELECT * FROM budget_item WHERE budget_name = '$budgetId'";
+	$query = "SELECT * FROM budget_item WHERE budget_name = '$budget_name'";
 	foreach ($db->query($query) as $row) {
     	$budget = $row['id'];
     }
