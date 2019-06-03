@@ -3,13 +3,13 @@
 	include("dbconnection.php");
 	$db=get_db();
 
-/*
+
 	$budgetId = htmlspecialchars($_POST['budgetName']);
 	$query = "SELECT * FROM budget_item WHERE budget_name = '$budgetId'";
 	foreach ($db->query($query) as $row) {
     	$budget = $row['id'];
     }
-
+/*
 	$payment = htmlspecialchars($_POST['payType']);
 	$query = "SELECT * FROM pay_method WHERE card_name = '$payment'";
 	foreach ($db->query($query) as $row) {
