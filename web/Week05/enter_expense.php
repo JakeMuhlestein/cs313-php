@@ -45,7 +45,7 @@
 echo $amount * 2;
 
 	//pg_query($db, $sql);
-
+pg_insert($db, transaction, $query);
 	$stmt = $db->prepare($query);
 
 	//$stmt->bindValue(':date', $date, PDO::PARAM_STR);
