@@ -65,9 +65,9 @@
 	$stmt->execute();
 	//$result = pg_query($db, $query);
 
-	$new_page = "transactions.php";
+	//$new_page = "transactions.php";
 
-	header("Location: $new_page");
-	die();
+	//header("Location: $new_page");
+	//die();
 
 ?>
