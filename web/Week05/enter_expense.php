@@ -39,21 +39,21 @@
 	//require("dbconnection.php");
 	//$db = get_db();
 
-	//$query = 'INSERT INTO transaction (date, vend_id, payment_id, budget_id, amount) VALUES (DEFAULT, '$date', '$vendor', '$payment', '$budget', '$amount')';
+	$query = 'INSERT INTO transaction (date, vend_id, payment_id, budget_id, amount) VALUES (DEFAULT, '$date', '$vendor', '$payment', '$budget', '$amount')';
 
-	$stmt = $db->prepare('INSERT INTO transaction(vend_id, payment_id, budget_id, amount) VALUES (:vendor, :payment, :budget, :amount);');
+	//$stmt = $db->prepare('INSERT INTO transaction(vend_id, payment_id, budget_id, amount) VALUES (:vendor, :payment, :budget, :amount);');
 
 
 	//pg_query($db, $sql);
 
-	//$stmt = $this->pdo->prepare($sql);
+	$stmt = $db->prepare($query);
 
 	//$stmt->bindValue(':date', $date, PDO::PARAM_STR);
 	//$stmt->bindValue(':vendor', $vendor, PDO::PARAM_INT);
 	//$stmt->bindValue(':payment', $payment, PDO::PARAM_INT);
 	//$stmt->bindValue(':budget', $budget, PDO::PARAM_INT);
 	//$stmt->bindValue(':amount', $amount, PDO::PARAM_INT);
-	//$stmt->execute();
+	$stmt->execute();
 	//$result = pg_query($db, $query);
 
 	$new_page = "transactions.php";
