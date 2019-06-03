@@ -46,7 +46,7 @@
 
 	//pg_query($db, $sql);
 
-	$stmt = $db->prepare($query);
+	$stmt = $db->prepare('$query');
 
 	//$stmt->bindValue(':date', $date, PDO::PARAM_STR);
 	//$stmt->bindValue(':vendor', $vendor, PDO::PARAM_INT);
