@@ -30,16 +30,16 @@
 	//$vendor = htmlspecialchars($_POST['vendor']);
 	$amount = htmlspecialchars($_POST['amount']);
 */
-	$date = $_GET['date'];
+	$date = $_POST['date'];
 	$budget = 1;
 	$payment = 1;
 	$vendor = 1;
-	$amount = $_GET['amount'];
+	$amount = $_POST['amount'];
 
 
 
 
-	//echo $date;
+	echo $date;
 	echo $budget;
 	echo $payment;
 	echo $vendor;
