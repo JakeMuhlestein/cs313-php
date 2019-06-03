@@ -30,11 +30,11 @@
 	//$vendor = htmlspecialchars($_POST['vendor']);
 	$amount = htmlspecialchars($_POST['amount']);
 */
-	$date = $_POST['date'];
-	$budget = 1;
-	$payment = 1;
-	$vendor = 1;
-	$amount = $_POST['amount'];
+	//$date = $_POST['date'];
+	$budget = 2;
+	$payment = 2;
+	$vendor = 2;
+	//$amount = $_POST['amount'];
 
 
 
@@ -61,7 +61,7 @@
 	$stmt->bindValue(':vendor', $vendor);
 	$stmt->bindValue(':payment', $payment);
 	$stmt->bindValue(':budget', $budget);
-	$stmt->bindValue(':amount', $amount, PDO::PARAM_INT);
+	$stmt->bindValue(':amount', $amount);
 	$stmt->execute();
 	//$result = pg_query($db, $query);
 
