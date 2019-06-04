@@ -5,7 +5,7 @@
 
 	//ransDate = $_POST['transDate'];
 	//transDate = new DateTime('$transDate');
-	$date = date($_POST['transDate']);
+	$transDate = date($_POST['transDate']);
 
 
 
@@ -48,7 +48,7 @@
 
 
 
-	echo $date;
+	echo $transDate;
 	echo $budget;
 	echo $payment;
 	echo $vendor;
