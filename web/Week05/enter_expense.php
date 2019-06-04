@@ -54,14 +54,14 @@
 
 	//$query = "INSERT INTO transaction (vend_id, payment_id, budget_id, amount) VALUES ( '$vendor', '$payment', '$budget', '$amount')";
 
-	$stmt = $db->prepare('INSERT INTO transaction(vend_id, payment_id, budget_id, amount) VALUES (:vendor, :payment, :budget, :amount)');
+	$stmt = $db->prepare('INSERT INTO transaction(date, vend_id, payment_id, budget_id, amount) VALUES (:vendor, :payment, :budget, :amount)');
 //echo $amount * 2;
 
 	//pg_query($db, $sql);
 //pg_insert($db, transaction, $query);
 	//$stmt = $db->prepare($query);
 
-	//$stmt->bindValue(':date', $date, PDO::PARAM_STR);
+	$stmt->bindValue(':date', $date);
 	$stmt->bindValue(':vendor', $vendor);
 	$stmt->bindValue(':payment', $payment);
 	$stmt->bindValue(':budget', $budget);
@@ -69,9 +69,9 @@
 	$stmt->execute();
 	//$result = pg_query($db, $query);
 
-	//$new_page = "transactions.php";
+	$new_page = "transactions.php";
 
-	//header("Location: $new_page");
-	//die();
+	header("Location: $new_page");
+	die();
 
 ?>
