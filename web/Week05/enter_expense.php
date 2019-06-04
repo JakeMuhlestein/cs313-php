@@ -5,7 +5,7 @@
 
 	//ransDate = $_POST['transDate'];
 	//transDate = new DateTime('$transDate');
-	$transDate = date($_POST['transDate']);
+	$transDate = date($_POST['date']);
 
 
 
