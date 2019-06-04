@@ -5,7 +5,7 @@
 
 	//ransDate = $_POST['transDate'];
 	//transDate = new DateTime('$transDate');
-	$transDate = $_POST['transDate'];
+	$transDate = date($_POST['transDate']);
 
 
 
@@ -74,9 +74,9 @@
 	$stmt->execute();
 	//$result = pg_query($db, $query);
 
-	$new_page = "transactions.php";
+	//$new_page = "transactions.php";
 
-	header("Location: $new_page");
-	die();
+	//header("Location: $new_page");
+	//die();
 
 ?>
