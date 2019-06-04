@@ -66,7 +66,7 @@
 //pg_insert($db, transaction, $query);
 	//$stmt = $db->prepare($query);
 
-	$stmt->bindValue(':transDdate', $transDate);
+	$stmt->bindValue(':transDate', $transDate);
 	$stmt->bindValue(':vendor', $vendor);
 	$stmt->bindValue(':payment', $payment);
 	$stmt->bindValue(':budget', $budget);
