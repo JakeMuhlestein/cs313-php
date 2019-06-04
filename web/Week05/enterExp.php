@@ -5,6 +5,7 @@ $db=get_db();
 $budgetCat = "SELECT budget_name FROM budget_item"; 
 $payment = "SELECT card_name FROM pay_method";
 $vendor = "SELECT vendor_name FROM vendors";
+$today = date("Y-m-d");
 
 ?>
 
@@ -35,7 +36,7 @@ $vendor = "SELECT vendor_name FROM vendors";
 	<h1>Enter Expenses</h1> <br />
     <form class="m-3 form-group mx-auto" action="enter_expense.php" method="POST">
     Date:  
-    <input name="date" type="text">
+    <input name="date" type="text" value="<?php $today ?>">
     <br /><br />
     Budget:  
     <select name="budgetName">
