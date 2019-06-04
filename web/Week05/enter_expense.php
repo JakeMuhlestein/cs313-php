@@ -3,7 +3,10 @@
 	include("dbconnection.php");
 	$db=get_db();
 
-	$date = date_format(($_POST['date']), 'Y, m, d');
+	$date = $_POST['date'];
+
+
+	
 	$budget = 0;
 	$payment = 0;
 	$vendor = 0;
