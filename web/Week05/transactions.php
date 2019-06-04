@@ -49,7 +49,7 @@ include("dbconnection.php");
 	foreach ($db->query($query) as $row) {
 	$budgetTotal = $budgetTotal + $row['amount'];	
     echo '<tr>';
-    echo '<td>' . $row['date'] . '</td>';
+    echo '<td>' . $row['transdate'] . '</td>';
     echo '<td>' . $row['budget_name'] . '</td>';
     echo '<td>' . $row['vendor_name'] . '</td>';
     echo '<td>' . $row['card_name'] . '</td>';
