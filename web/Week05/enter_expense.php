@@ -3,7 +3,7 @@
 	include("dbconnection.php");
 	$db=get_db();
 
-	$transDate = $_POST['date'];
+	$transDate = date($_POST['transDate']);
 
 
 
