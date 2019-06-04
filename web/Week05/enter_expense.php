@@ -3,10 +3,10 @@
 	include("dbconnection.php");
 	$db=get_db();
 
-	$date = $_POST['date'];
+	$transDate = $_POST['date'];
 
 
-	
+
 	$budget = 0;
 	$payment = 0;
 	$vendor = 0;
@@ -46,7 +46,7 @@
 
 
 
-	echo $date;
+	echo $transDate;
 	echo $budget;
 	echo $payment;
 	echo $vendor;
@@ -57,7 +57,7 @@
 
 	//$query = "INSERT INTO transaction (vend_id, payment_id, budget_id, amount) VALUES ( '$vendor', '$payment', '$budget', '$amount')";
 
-	$stmt = $db->prepare('INSERT INTO transaction(date, vend_id, payment_id, budget_id, amount) VALUES (:vendor, :payment, :budget, :amount)');
+	$stmt = $db->prepare('INSERT INTO transaction(transdate, vend_id, payment_id, budget_id, amount) VALUES (:transDate, :vendor, :payment, :budget, :amount)');
 //echo $amount * 2;
 
 	//pg_query($db, $sql);
