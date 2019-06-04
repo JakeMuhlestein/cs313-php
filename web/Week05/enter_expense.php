@@ -3,9 +3,9 @@
 	include("dbconnection.php");
 	$db=get_db();
 
-	$transDate = $_POST['transDate'];
-	$transDate = new DateTime('$transDate');
-	//$transDate = date($_POST['transDate']);
+	//ransDate = $_POST['transDate'];
+	//transDate = new DateTime('$transDate');
+	$transDate = date($_POST['transDate']);
 
 
 
