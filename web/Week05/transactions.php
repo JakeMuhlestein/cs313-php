@@ -45,7 +45,7 @@ include("dbconnection.php");
     	JOIN pay_method AS p ON t.payment_id = p.id
     	JOIN vendors v ON t.vend_id = v.id
 		JOIN budget_item AS b ON t.budget_id = b.id
-		ORDER BY transdate;"
+		ORDER BY TRANSDATE DESC;"
 
 	foreach ($db->query($query) as $row) {
 	$budgetTotal = $budgetTotal + $row['amount'];	
