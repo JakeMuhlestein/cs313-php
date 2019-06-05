@@ -26,7 +26,7 @@ $db=get_db();
     	<li><a class="active" href="createBudget.php">Create Budget</a></li>
   	</ul>
 
-<form action"" method="post">
+<!--<form action="" method="post"> -->
   	<table>
 	<tr>
 		<th>Budget</th>
@@ -39,9 +39,11 @@ $db=get_db();
   		$query = "SELECT * FROM budget_item"; 
 
 		foreach ($db->query($query) as $row) {
+      echo '<form action="updateBudget.php" method="POST">';
     	echo '<tr>';
     	echo '<td>' . $row['budget_name'] . '</td>';
     	echo "<td><input type='text' name='amount' value=\"{$row['budget_amount']}\"></td>";
+      echo "<input type='button' name='update'>";
     	echo '</tr>';
     	}
 
@@ -52,8 +54,8 @@ $db=get_db();
     <td><input type="text" name="newAmount"></td>
   </tr>
   </table>
-  <input type="submit" value="Add/Edit budget">
-  </form>
+  <!--<input type="submit" value="Add/Edit budget">
+  </form>-->
 
 	</body>
 </html>
