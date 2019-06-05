@@ -36,7 +36,7 @@ $today = date("Y-m-d");
 	<h1>Enter Expenses</h1> <br />
     <form class="m-3 form-group mx-auto" action="enter_expense.php" method="POST">
     Date:  
-    <input name="date" type="text">
+    <input name="date" type="text" value="<?php echo $today; ?>" />
     <br /><br />
     Budget:  
     <select name="budgetName">
@@ -84,9 +84,7 @@ $today = date("Y-m-d");
     	
 
 
- 	<?php
-echo $today;
-?>
+ 	
 
 </body>
 </html>
