@@ -63,7 +63,9 @@ $db = get_db();
   	$query = "SELECT * FROM transaction AS t
     	JOIN pay_method AS p ON t.payment_id = p.id
     	JOIN vendors v ON t.vend_id = v.id
-		JOIN budget_item AS b ON t.budget_id = b.id WHERE b.budget_name = '$budget'"; 
+		JOIN budget_item AS b ON t.budget_id = b.id 
+		WHERE b.budget_name = '$budget'
+		ORDER BY transdate DESC"; 
 
 	foreach ($db->query($query) as $row) {
 	$expenseTotal = $expenseTotal + $row['amount'];

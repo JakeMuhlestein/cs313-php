@@ -47,6 +47,9 @@ $db=get_db();
 
     
 	?>
+  <tr>
+    <td><input type="text" name="newBudget"></td>
+  </tr>
   </table>
   <input type="submit" value="Add/Edit budget">
   </form>
