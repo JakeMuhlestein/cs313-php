@@ -84,9 +84,9 @@ $today = date("Y-m-d");
     	
 
 
- 	
-
-
+ 	<?php
+echo $today;
+?>
 
 </body>
 </html>

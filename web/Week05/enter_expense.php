@@ -10,7 +10,6 @@
 	$vendor = 0;
 	$amount = $_POST['amount'];
 
-
 	$budgetId = htmlspecialchars($_POST['budgetName']);
 	$query = "SELECT * FROM budget_item WHERE budget_name = '$budgetId'";
 	foreach ($db->query($query) as $row) {
