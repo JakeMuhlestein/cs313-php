@@ -42,7 +42,6 @@ include("dbconnection.php");
 
 
   	$query = "SELECT * FROM transaction AS t
-  		ORDER BY transdate DESC
     	JOIN pay_method AS p ON t.payment_id = p.id
     	JOIN vendors v ON t.vend_id = v.id
 		JOIN budget_item AS b ON t.budget_id = b.id;"
