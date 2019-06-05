@@ -41,7 +41,7 @@ $db=get_db();
 		foreach ($db->query($query) as $row) {
       echo '<form action="updateBudget.php" method="POST">';
     	echo '<tr>';
-      echo "input type='hidden' name=\"{$row['budget_name']}\" value=\"{$row['budget_amount']}\" >";
+      echo "<td> input type='hidden' name=\"{$row['budget_name']}\" value=\"{$row['budget_name']}\" ></td>";
     	echo '<td>' . $row['budget_name'] . '</td>';
     	echo "<td><input type='text' name='amount' value=\"{$row['budget_amount']}\">";
       echo "<input type='button' name='update' value='Update'></td>";
