@@ -46,7 +46,7 @@ $db=get_db();
     	echo "<td><input type='text' name='amount' value=\"{$row['budget_amount']}\">";
       echo "<input type='button' name='update' value='Update'></td>";
     	echo '</tr>';
-      echo "</form>"
+      echo "</form>";
     	}
 
     
