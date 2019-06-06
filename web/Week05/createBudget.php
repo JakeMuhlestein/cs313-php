@@ -44,17 +44,20 @@ $db=get_db();
       echo "<td> <input type='hidden' name=\"{$row['budget_name']}\" value=\"{$row['budget_name']}\" >";
     	echo $row['budget_name'] . '</td>';
     	echo "<td><input type='text' name='amount' value=\"{$row['budget_amount']}\">";
-      echo "<input type='button' name='update' value='Update'></td>";
+      echo "<input type='button' name='update' value='Update'>";
+      echo "<input type='button' name='delete' value='Delete'></td>";
     	echo '</tr>';
       echo "</form>";
     	}
 
     
 	?>
+  <form action="addNew" method="post">
   <tr>
     <td><input type="text" name="newBudget"></td>
     <td><input type="text" name="newAmount"></td>
   </tr>
+  </form>
   </table>
   <!--<input type="submit" value="Add/Edit budget">
   </form>-->
