@@ -30,5 +30,10 @@ FOREIGN KEY (budget_id) REFERENCES budget_item (id)
 );
 
 
+INSERT INTO transaction 
+(transdate, vend_id, payment_id, budget_id, amount)
+VALUES (:transDate, :vendor, :payment, :budget, :amount);
 
-
+UPDATE budget_Item
+SET budget_amount = $amount
+WHERE budget_name = $budget;
