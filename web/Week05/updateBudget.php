@@ -25,6 +25,17 @@
 
 	if($_POST["delete"]) {
 
+		$query = "DELETE FROM budget_Item
+				  WHERE budget_name = '$budget'";
+
+		$stmt = $db->prepare($query);
+		$stmt->execute();
+
+	$new_page = "createBudget.php";
+
+	header("Location: $new_page");
+	die();
+
 
 	}	
 
