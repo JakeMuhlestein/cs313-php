@@ -5,7 +5,8 @@
 	$budget = $_POST['newBudget'];
 	$amount = $_POST['newAmount'];
 
-
+	echo $budget;
+	echo $amount;
 
 
 	$query = "INSERT INTO budget_Itemm 
