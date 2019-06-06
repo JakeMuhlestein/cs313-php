@@ -52,15 +52,14 @@ $db=get_db();
 
     
 	?>
-  <form action="addNew" method="post">
+  <form action="addNew.php" method="post">
   <tr>
     <td><input type="text" name="newBudget"></td>
-    <td><input type="text" name="newAmount"></td>
+    <td><input type="text" name="newAmount">
+    <input type="submit" value="Add/Edit budget"></td>
   </tr>
   </form>
   </table>
-  <!--<input type="submit" value="Add/Edit budget">
-  </form>-->
-
+  
 	</body>
 </html>
