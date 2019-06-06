@@ -2,8 +2,8 @@
 
 	include("dbconnection.php");
 	$db=get_db();
-	$budget = $_POST['budgetName'];
-	$amount = $_POST['amount'];
+	$budget = $_POST['newBudget'];
+	$amount = $_POST['newAmount'];
 
 
 
