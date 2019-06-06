@@ -15,7 +15,10 @@
 		$stmt = $db->prepare($query);
 		$stmt->execute();
 
+	$new_page = "createBudget.php";
 
+	header("Location: $new_page");
+	die();
 
 
 	}
