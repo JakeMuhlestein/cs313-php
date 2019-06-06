@@ -9,7 +9,7 @@
 	echo $amount;
 
 
-	$query = "INSERT INTO budget_Itemm 
+	$query = "INSERT INTO budget_Item 
 			(budget_name, budget_amount)
 			VALUES (:budget, :amount)";
 
