@@ -17,7 +17,7 @@ $end_date = date('Y-m-t');
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <title><?php echo date('F Y') ?>Current Month Budget</title>
+  <title>Current Month Budget</title>
 </head>
 <body >
 	<ul>
@@ -29,7 +29,7 @@ $end_date = date('Y-m-t');
       <li><a href="createBudget.php">Create Budget</a></li>
   	</ul>
 
-<h1>Budget</h1>
+<h1><?php echo date('F Y') ?> Budget</h1>
 
 
 <form class="m-3 form-group mx-auto" action="" method="post">
