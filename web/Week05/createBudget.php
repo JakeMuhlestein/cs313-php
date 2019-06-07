@@ -56,10 +56,10 @@ $db=get_db();
   <tr>
     <td><input type="text" name="newBudget"></td>
     <td><input type="text" name="newAmount">
-    <input type="submit" value="Add/Edit budget"></td>
+    <input type="submit" value="Add Budget Category"></td>
   </tr>
   </form>
   </table>
-  
+
 	</body>
 </html>

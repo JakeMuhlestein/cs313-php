@@ -29,7 +29,7 @@ $end_date = date('Y-m-t');
       <li><a href="createBudget.php">Create Budget</a></li>
   	</ul>
 
-<h1><?php echo date('F Y') ?> Budget</h1>
+<h1><?php echo date('F Y') ?> Budget Reports</h1>
 
 
 <form class="m-3 form-group mx-auto" action="" method="post">

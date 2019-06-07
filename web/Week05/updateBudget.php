@@ -28,6 +28,9 @@
 		$query = "DELETE FROM budget_Item
 				  WHERE budget_name = '$budget'";
 
+		$query2 = "DELETE FROM budget_Item
+				  WHERE budget_name = '$budget'";
+
 		$stmt = $db->prepare($query);
 		$stmt->execute();
 
