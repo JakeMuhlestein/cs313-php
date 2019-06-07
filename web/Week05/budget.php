@@ -2,6 +2,9 @@
 include("dbconnection.php");
 $budgetCat = "SELECT budget_name FROM budget_item"; 
 $db = get_db();
+$start_date = date('Y-m-01');
+$end_date = date('Y-m-t');
+
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +17,7 @@ $db = get_db();
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <title>Budget</title>
+  <title>Current Month Budget</title>
 </head>
 <body >
 	<ul>
@@ -65,6 +68,8 @@ $db = get_db();
     	JOIN vendors v ON t.vend_id = v.id
 		JOIN budget_item AS b ON t.budget_id = b.id 
 		WHERE b.budget_name = '$budget'
+		AND t.transdate >= '$start_date'
+		AND t.transdate <= '$end_date'
 		ORDER BY transdate DESC"; 
 
 	foreach ($db->query($query) as $row) {
