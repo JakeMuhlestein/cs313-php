@@ -22,10 +22,10 @@
 
 		$stmt->execute();
 
-		//$new_page = "update.php";
+		$new_page = "update.php";
 
-		//header("Location: $new_page");
-		//die();
+		header("Location: $new_page");
+		die();
 
 	}
 		
@@ -45,10 +45,10 @@
 
 		$stmt->execute();
 
-	//$new_page = "update.php";
+	$new_page = "update.php";
 
-	//header("Location: $new_page");
-	//die();
+	header("Location: $new_page");
+	die();
 
 	}
 ?>
