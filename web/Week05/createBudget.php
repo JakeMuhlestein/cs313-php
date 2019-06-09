@@ -36,7 +36,8 @@ $db=get_db();
 
 	<?php
 	
-  		$query = "SELECT * FROM budget_item"; 
+  		$query = "SELECT * FROM budget_item
+                WHERE budget_item = true"; 
 
 		foreach ($db->query($query) as $row) {
       echo '<form action="updateBudget.php" method="post">';
