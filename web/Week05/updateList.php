@@ -2,29 +2,51 @@
 
 	include("dbconnection.php");
 	$db=get_db();
-	$budget = $_POST['newBudget'];
-	$amount = $_POST['newAmount'];
-	$active = true;
 
-	echo $budget;
-	echo $amount;
+	
 
+	
+	if($_POST["pay"]) {
 
-	$query = "INSERT INTO budget_Item 
-			(budget_name, budget_amount, active )
-			VALUES (:budget, :amount, :active)";
+	$payment = $_POST['payment'];
+
+	$query = "INSERT INTO pay_method
+			(card_name)
+			VALUES (:payment)";
 
 	$stmt = $db->prepare($query);
 
-	$stmt->bindValue(':budget', $budget);
-	$stmt->bindValue(':amount', $amount);
-	$stmt->bindValue(':active', $active);
+	$stmt->bindValue(':payment', $payment);
+
 	$stmt->execute();
 
-	$new_page = "createBudget.php";
+	$new_page = "update.php";
 
 	header("Location: $new_page");
 	die();
+
+	}
+		
+	if($_POST["vend"]) {
+	
+	$vendor = $_POST['vendor'];
+
+	$query = "INSERT INTO vendors 
+				(vendor_name)
+			VALUES (:vendor)";
+
+	$stmt = $db->prepare($query);
+
+	$stmt->bindValue(':vendor', $vendor);
+
+	$stmt->execute();
+
+	$new_page = "update.php";
+
+	header("Location: $new_page");
+	die();
+
+	}
 ?>
 
 	
