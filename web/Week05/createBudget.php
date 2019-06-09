@@ -45,7 +45,7 @@ $db=get_db();
     	echo $row['budget_name'] . '</td>';
     	echo "<td><input type='text' name='amount' value=\"{$row['budget_amount']}\">";
       echo "<input type='submit' name='update' value='Update'>";
-      echo "<input type='submit' name='delete' value='Delete'></td>";
+      echo "<input type='submit' name='deactivate' value='Deactivate'></td>";
     	echo '</tr>';
       echo "</form>";
     	}

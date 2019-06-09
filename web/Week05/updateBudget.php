@@ -25,11 +25,11 @@
 
 	if($_POST["delete"]) {
 
-		$query = "DELETE FROM budget_Item
+		$query = "UPDATE budget_Item
+				  SET amount = false
 				  WHERE budget_name = '$budget'";
 
-		$query2 = "DELETE FROM budget_Item
-				  WHERE budget_name = '$budget'";
+
 
 		$stmt = $db->prepare($query);
 		$stmt->execute();
