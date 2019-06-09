@@ -2,7 +2,8 @@
 include("dbconnection.php");
 $db=get_db();
 
-$budgetCat = "SELECT budget_name FROM budget_item"; 
+$budgetCat = "SELECT budget_name FROM budget_item
+	 	  	  WHERE active = true"; 
 $payment = "SELECT card_name FROM pay_method";
 $vendor = "SELECT vendor_name FROM vendors";
 $today = date("Y-m-d");
