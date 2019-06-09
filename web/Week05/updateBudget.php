@@ -23,7 +23,7 @@
 
 	}
 
-	if($_POST["deactivate"]) {
+	if($_POST["vendor"]) {
 
 		$query = "UPDATE budget_Item
 				  SET active = false
