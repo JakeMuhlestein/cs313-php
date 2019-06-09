@@ -27,11 +27,11 @@ include("dbconnection.php");
 	<h1>Update</h1>
 	<form action="updateList.php" method="post">
 		Add Payment Type: <input type="text" name="payment">
-		<input type="submit" name="payment" value="Update">
+		<input type="submit" name="pay" value="Update">
 	</form>
 	<form action="updateList.php" method="post">
 		Add Vendor: <input type="text" name="vendor">
-		<input type="submit" name="vendor" value="Update">
+		<input type="submit" name="vend" value="Update">
 	</form>
 
 
