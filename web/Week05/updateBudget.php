@@ -23,10 +23,10 @@
 
 	}
 
-	if($_POST["delete"]) {
+	if($_POST["deactivate"]) {
 
 		$query = "UPDATE budget_Item
-				  SET amount = false
+				  SET active = false
 				  WHERE budget_name = '$budget'";
 
 
