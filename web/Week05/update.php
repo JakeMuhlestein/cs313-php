@@ -25,11 +25,15 @@ include("dbconnection.php");
 	  <li><a href="createBudget.php">Create Budget</a></li>
   	</ul>
 	<h1>Update</h1>
-	<form action="" method="post">
+	<form action="updateList.php" method="post">
 		Add Payment Type: <input type="text" name="payment"><br /><br />
-		Add Vendor: <input type="text" name="vendor"><br /><br />
-		<input type="submit" name="Update">
+		<input type="submit" name="payment" value="Update">
 	</form>
+	<form action="updateList.php" method="post">
+		Add Vendor: <input type="text" name="vendor"><br /><br />
+		<input type="submit" name="vendor" value="Update">
+	</form>
+
 
 </body>
 </html>
