@@ -1,6 +1,7 @@
 <?php
 include("dbconnection.php");
-$budgetCat = "SELECT budget_name FROM budget_item"; 
+$budgetCat = "SELECT budget_name FROM budget_item
+			  WHERE active = true"; 
 $db = get_db();
 $start_date = date('Y-m-01');
 $end_date = date('Y-m-t');
