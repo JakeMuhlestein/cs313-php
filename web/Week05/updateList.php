@@ -31,6 +31,7 @@
 	
 	$vendor = $_POST['vendor'];
 
+	echo $vendor;
 	$query = "INSERT INTO vendors 
 				(vendor_name)
 			VALUES (:vendor)";
@@ -41,10 +42,10 @@
 
 	$stmt->execute();
 
-	$new_page = "update.php";
+	//$new_page = "update.php";
 
-	header("Location: $new_page");
-	die();
+	//header("Location: $new_page");
+	//die();
 
 	}
 ?>
